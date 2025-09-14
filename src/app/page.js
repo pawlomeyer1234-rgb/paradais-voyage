@@ -1,0 +1,130 @@
+"use client";
+import { useState } from "react";
+
+export default function Page(){
+  const [open, setOpen] = useState(false);
+  return (
+    <main className="pv-root">
+      <header className="pv-nav">
+        <div className="pv-container nav-grid">
+          <div className="brand">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span className="brand-mark" aria-hidden="true" />
+              <div>
+                <span className="brand-text">Paradais Voyage</span>
+                <div className="brand-tagline">Luxury Travel Concierge</div>
+              </div>
+            </div>
+          </div>
+          <nav className="nav-items">
+            <a href="#experiences">Experiences</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#about">About</a>
+            <a className="btn-glass btn-sm" href="#form">
+              Plan Your Sojourn
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <section className="pv-hero">
+        <div className="pv-container hero-grid">
+          <div className="hero-copy glass-card">
+            <h1>Stay. Travel. Arrive in Style.</h1>
+            <p>Exclusive hotels. Private jets. Luxury transfer. Paradais Voyage - where travel becomes effortless.</p>
+            <div className="cta-row">
+              <a className="btn-gold" href="#form">Start Your Journey</a>
+              <a className="btn-glass" href="#experiences">Explore Experiences</a>
+            </div>
+            <ul className="trust-badges">
+              <li className="badge-glass">Bespoke Itineraries</li>
+              <li className="badge-glass">24/7 Concierge</li>
+              <li className="badge-glass">Discreet VIP Access</li>
+            </ul>
+          </div>
+          <div className="hero-visual">
+            <div className="hero-media glass-panel" />
+          </div>
+        </div>
+      </section>
+
+      <section id="experiences" className="pv-section">
+        <div className="pv-container cards">
+          {[
+            { title: "Luxury Hotels", copy: "Luxury reimagined: curated hotels offering silence, beauty, and perfection.", images: ["/images/hero/hotel 1.jpg", "/images/hero/hotel 2.jpg"] },
+            { title: "Private Transfer", copy: "Personal drivers, luxury vehicles, zero compromises.", images: ["/images/hero/Car 1.webp", "/images/hero/car 2.jpg"] },
+            { title: "Flights, Jets & Yachts", copy: "From take-off to open waters—luxury travel, uninterrupted.", images: ["/images/hero/jet.webp", "/images/hero/Yacht.jpg"] }
+          ].map((c, i) => (
+            <article key={i} className="feature-card glass-card">
+              {c.images && (
+                <div className="experience-images">
+                  {c.images.map((img, imgIndex) => (
+                    <div key={imgIndex} className="experience-image" style={{ backgroundImage: `url('${img}')` }}>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <h3>{c.title}</h3>
+              <p>{c.copy}</p>
+              <button className="btn-link">Explore Perfection →</button>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="destinations" className="pv-section pv-strip">
+        <div className="pv-container strip-row">
+          {[
+            { name: "Maldives", image: "/images/hero/Maledives.jpg" },
+            { name: "Dubai", image: "/images/hero/Dubai.jpg" }
+          ].map((d, i) => (
+            <div key={i} className="chip glass-chip destination-chip">
+              <div className="destination-image" style={{ backgroundImage: `url(${d.image})` }}></div>
+              <span className="destination-name">{d.name}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="about" className="pv-section">
+        <div className="pv-container about-grid">
+          <div className="about-card glass-card">
+            <h2>About Paradais Voyage</h2>
+            <p>Paradais Voyage is a luxury business and travel concierge that connects clients with trusted global suppliers. We ensure smooth cooperation, reliable services, and full transparency. Our mission is to make every experience effortless, safe, and unique - whether it's travel, business, or lifestyle.</p>
+            <a className="btn-gold" href="#form">Request a Proposal</a>
+          </div>
+          <div className="about-side glass-panel" />
+        </div>
+      </section>
+
+      <section id="form" className="pv-section pv-form">
+        <div className="pv-container">
+          <form className="form-glass" onSubmit={(e) => e.preventDefault()}>
+            <h3>Let's Plan Your Next Sojourn</h3>
+            <div className="grid">
+              <input className="input-glass" placeholder="Full name" required />
+              <input className="input-glass" placeholder="Email" type="email" required />
+              <input className="input-glass" placeholder="Phone (optional)" />
+              <input className="input-glass" placeholder="Preferred dates" />
+            </div>
+            <textarea className="input-glass" rows={5} placeholder="Tell us the vibe, not just the place..." />
+            <div className="form-foot">
+              <button className="btn-gold" type="submit">Submit Request</button>
+              <span className="fine">Response from a concierge within 24 hours.</span>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer className="pv-footer">
+        <div className="pv-container foot">
+          <div>Contact: info@paradaisvoyage.com</div>
+          <div className="sep" />
+          <div>© {new Date().getFullYear()} Paradais Voyage</div>
+          <div className="sep" />
+          <div className="muted">Luxury Travel Concierge</div>
+        </div>
+      </footer>
+    </main>
+  );
+}
