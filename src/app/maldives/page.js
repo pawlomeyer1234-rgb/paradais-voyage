@@ -88,16 +88,14 @@ export default function MaldivesPage() {
           <div className="about-grid">
             <div className="about-card glass-card">
               <h2>Why Choose Maldives with Paradais Voyage?</h2>
-              <p>Our Maldives expertise goes beyond booking. We understand the nuances of each atoll, the seasonal variations, and the hidden gems that make your stay truly extraordinary. From the moment you land at Malé International Airport to your private seaplane transfer, every detail is meticulously planned.</p>
+              <p>Our Maldives expertise ensures you experience effortless luxury. From the moment you land at Malé International Airport to the time you relax in your villa, every transfer, every booking, and every upgrade is carefully managed.</p>
               
               <h3 style={{ marginTop: '30px', marginBottom: '15px' }}>What We Include:</h3>
               <ul style={{ color: '#cbd5e1', lineHeight: '1.8', marginBottom: '20px' }}>
-                <li>✓ Private seaplane or speedboat transfers</li>
-                <li>✓ Exclusive resort access and upgrades</li>
-                <li>✓ 24/7 concierge support during your stay</li>
-                <li>✓ Bespoke dining experiences and reservations</li>
-                <li>✓ Private excursions and water activities</li>
-                <li>✓ Spa treatments and wellness programs</li>
+                <li>✔ Handpicked 5-star resorts and villas</li>
+                <li>✔ Private speedboat & seaplane transfers</li>
+                <li>✔ Exclusive upgrades and benefits with partner hotels</li>
+                <li>✔ 24/7 concierge support during your journey</li>
               </ul>
               
               <Link className="btn-gold" href="/#form">Start Planning Your Maldives Journey</Link>
