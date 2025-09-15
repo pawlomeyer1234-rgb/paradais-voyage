@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Page(){
   const [open, setOpen] = useState(false);
@@ -75,13 +76,16 @@ export default function Page(){
       <section id="destinations" className="pv-section pv-strip">
         <div className="pv-container strip-row">
           {[
-            { name: "Maldives", image: "/images/hero/Maledives.jpg" },
-            { name: "Dubai", image: "/images/hero/Dubai.jpg" }
+            { name: "Maldives", image: "/images/hero/Maledives.jpg", link: "/maldives", clickable: true },
+            { name: "Dubai", image: "/images/hero/Dubai.jpg", link: "#", clickable: false }
           ].map((d, i) => (
-            <div key={i} className="chip glass-chip destination-chip">
+            <Link key={i} href={d.link} className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="destination-image" style={{ backgroundImage: `url(${d.image})` }}></div>
-              <span className="destination-name">{d.name}</span>
-            </div>
+              <span className="destination-name">
+                {d.name}
+                {d.clickable && <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span>}
+              </span>
+            </Link>
           ))}
         </div>
       </section>
