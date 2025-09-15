@@ -392,6 +392,13 @@ body {
   overflow: hidden;
   min-width: 200px;
   min-height: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.destination-chip:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .destination-image {
