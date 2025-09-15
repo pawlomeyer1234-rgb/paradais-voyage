@@ -54,8 +54,8 @@ export default function MaldivesPage() {
                   borderRadius: '12px'
                 }}></div>
               </div>
-              <h3>Overwater Villas</h3>
-              <p>Experience the pinnacle of luxury in our handpicked overwater villas. Wake up to panoramic ocean views, step directly into crystal-clear waters, and enjoy unparalleled privacy in your own slice of paradise.</p>
+              <h3>Luxury Beachfront & Overwater Villas</h3>
+              <p>Handpicked resort offering breathtaking ocean views, private pools, and world-class comfort-tailored to your preferences.</p>
             </article>
 
             <article className="feature-card glass-card">
@@ -65,8 +65,8 @@ export default function MaldivesPage() {
                   borderRadius: '12px'
                 }}></div>
               </div>
-              <h3>Exclusive Resorts</h3>
-              <p>Access to the world's most exclusive Maldivian resorts, including private islands, Michelin-starred dining, and bespoke experiences tailored to your every desire.</p>
+              <h3>Seamless Transfers</h3>
+              <p>Private speedboat and seaplane transfers arranged with precision, ensuring a stress-free arrival and departure.</p>
             </article>
 
             <article className="feature-card glass-card">
@@ -76,8 +76,8 @@ export default function MaldivesPage() {
                   borderRadius: '12px'
                 }}></div>
               </div>
-              <h3>Private Experiences</h3>
-              <p>From private yacht charters to underwater dining experiences, helicopter transfers to secluded sandbanks, we curate once-in-a-lifetime moments exclusively for you.</p>
+              <h3>Personalized Stay</h3>
+              <p>From exclusive upgrades to tailored requests, we coordinate every detail with the resort to make your stay effortless.</p>
             </article>
           </div>
         </div>
