@@ -34,7 +34,7 @@ export default function MaldivesPage() {
               Maldives Paradise
             </h1>
             <p style={{ fontSize: '1.3rem', color: '#cbd5e1', marginBottom: '30px', maxWidth: '800px', margin: '0 auto 30px' }}>
-              Discover the ultimate luxury escape in the Maldives - where crystal-clear waters meet pristine white sands and world-class resorts await your arrival.
+              Discover The Ultimate Luxury Escape in Maldives - where pristine white sands meet crystal-clear waters and world-class resorts welcome you with unforgettable service.
             </p>
             <div className="cta-row" style={{ justifyContent: 'center', gap: '20px' }}>
               <Link className="btn-gold" href="/#form">Plan Your Maldives Escape</Link>
