@@ -80,7 +80,7 @@ export default function MaldivesPage() {
                 <div className="experience-image" style={{ 
                   backgroundImage: 'url("/images/hero/Maledives dinner.jpg")',
                   borderRadius: '12px',
-                  backgroundSize: 'contain',
+                  backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat'
                 }}></div>
