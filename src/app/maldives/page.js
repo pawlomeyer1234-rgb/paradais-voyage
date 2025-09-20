@@ -50,8 +50,14 @@ export default function MaldivesPage() {
             <article className="feature-card glass-card">
               <div className="experience-images" style={{ height: '200px', marginBottom: '20px' }}>
                 <div className="experience-image" style={{ 
-                  backgroundImage: 'url("/images/hero/Luxury Beachfront & Overwater Villas.jpg")',
-                  borderRadius: '12px'
+                  backgroundImage: 'url("/images/hero/Villa.jpg")',
+                  borderRadius: '12px',
+                  width: '48%'
+                }}></div>
+                <div className="experience-image" style={{ 
+                  backgroundImage: 'url("/images/hero/Villa 2.jpg")',
+                  borderRadius: '12px',
+                  width: '48%'
                 }}></div>
               </div>
               <h3>Luxury Beachfront & Overwater Villas</h3>
@@ -61,12 +67,12 @@ export default function MaldivesPage() {
             <article className="feature-card glass-card">
               <div className="experience-images" style={{ height: '200px', marginBottom: '20px' }}>
                 <div className="experience-image" style={{ 
-                  backgroundImage: 'url("/images/hero/car 2.jpg")',
+                  backgroundImage: 'url("/images/hero/speedboat.jpg")',
                   borderRadius: '12px',
                   width: '48%'
                 }}></div>
                 <div className="experience-image" style={{ 
-                  backgroundImage: 'url("/images/hero/jet.webp")',
+                  backgroundImage: 'url("/images/hero/seaplane.jpg")',
                   borderRadius: '12px',
                   width: '48%'
                 }}></div>
@@ -78,14 +84,8 @@ export default function MaldivesPage() {
             <article className="feature-card glass-card">
               <div className="experience-images" style={{ height: '200px', marginBottom: '20px' }}>
                 <div className="experience-image" style={{ 
-                  backgroundImage: 'url("/images/hero/hotel 1.jpg")',
-                  borderRadius: '12px',
-                  width: '48%'
-                }}></div>
-                <div className="experience-image" style={{ 
-                  backgroundImage: 'url("/images/hero/hotel 2.jpg")',
-                  borderRadius: '12px',
-                  width: '48%'
+                  backgroundImage: 'url("/images/hero/Personalized Stay.jpg")',
+                  borderRadius: '12px'
                 }}></div>
               </div>
               <h3>Personalized Stay</h3>
