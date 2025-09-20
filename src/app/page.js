@@ -77,7 +77,7 @@ export default function Page(){
         <div className="pv-container strip-row">
           {[
             { name: "Maldives", image: "/images/hero/Maledives.jpg", link: "/maldives", clickable: true },
-            { name: "Dubai", image: "/images/hero/Dubai.jpg", link: "#", clickable: false }
+            { name: "Dubai", image: "/images/hero/Dubai.jpg", link: "/dubai", clickable: true }
           ].map((d, i) => (
             <Link key={i} href={d.link} className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="destination-image" style={{ backgroundImage: `url(${d.image})` }}></div>
