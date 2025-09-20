@@ -81,7 +81,7 @@ export default function MaldivesPage() {
                   backgroundImage: 'url("/images/hero/Maledives dinner.jpg")',
                   borderRadius: '12px',
                   backgroundSize: 'cover',
-                  backgroundPosition: 'center',
+                  backgroundPosition: 'center top',
                   backgroundRepeat: 'no-repeat'
                 }}></div>
               </div>
