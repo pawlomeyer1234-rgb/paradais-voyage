@@ -125,7 +125,7 @@ export default function MaldivesPage() {
               <input className="input-glass" placeholder="Phone (optional)" />
               <input className="input-glass" placeholder="Preferred travel dates" />
             </div>
-            <textarea className="input-glass" rows={5} placeholder="Tell us about your dream Maldives experience - overwater villa preferences, activities you'd like, special occasions..." />
+            <textarea className="input-glass" rows={5} placeholder="Tell us the vibe, not just the place..." />
             <div className="form-foot">
               <button className="btn-gold" type="submit">Request Maldives Proposal</button>
               <span className="fine">Personalized itinerary within 24 hours.</span>
