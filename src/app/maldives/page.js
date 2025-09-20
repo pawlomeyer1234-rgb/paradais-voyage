@@ -78,9 +78,9 @@ export default function MaldivesPage() {
             <article className="feature-card glass-card">
               <div className="experience-images" style={{ height: '200px', marginBottom: '20px' }}>
                 <div className="experience-image" style={{ 
-                  backgroundImage: 'url("/images/hero/hotel area.jpg")',
+                  backgroundImage: 'url("/images/hero/Maledives dinner.jpg")',
                   borderRadius: '12px',
-                  backgroundSize: 'cover',
+                  backgroundSize: 'contain',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat'
                 }}></div>
