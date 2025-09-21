@@ -107,7 +107,7 @@ export default function MaldivesPage() {
               <Link className="btn-gold" href="/#form">Start Planning Your Maldives Journey</Link>
             </div>
             <div className="about-side glass-panel" style={{ 
-              backgroundImage: 'url("/images/hero/Maledives.jpg")',
+              backgroundImage: 'url("/images/hero/Maledives city.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }} />
