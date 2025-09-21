@@ -50,7 +50,7 @@ export default function DubaiPage() {
             <article className="feature-card glass-card">
               <div className="experience-images" style={{ height: '200px', marginBottom: '20px' }}>
                 <div className="experience-image" style={{ 
-                  backgroundImage: 'url("/images/hero/Dubai.jpg")',
+                  backgroundImage: 'url("/images/hero/Voilla.jpg")',
                   borderRadius: '12px'
                 }}></div>
               </div>
