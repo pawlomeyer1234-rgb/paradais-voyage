@@ -31,7 +31,7 @@ export default function MaldivesPage() {
           <div className="glass-card" style={{ textAlign: 'center', padding: '60px 40px' }}>
             <h1 style={{ fontSize: '3rem', marginBottom: '20px', background: 'linear-gradient(135deg, #00B4DB, #0083B0)', 
                         backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent' }}>
-              Maldives Paradise
+              Maldives Paradais
             </h1>
             <p style={{ fontSize: '1.3rem', color: '#cbd5e1', marginBottom: '30px', maxWidth: '800px', margin: '0 auto 30px' }}>
               Discover The Ultimate Luxury Escape in Maldives - where pristine white sands meet crystal-clear waters and world-class resorts welcome you with unforgettable service.

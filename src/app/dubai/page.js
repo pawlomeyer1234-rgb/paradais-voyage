@@ -31,7 +31,7 @@ export default function DubaiPage() {
           <div className="glass-card" style={{ textAlign: 'center', padding: '60px 40px' }}>
             <h1 style={{ fontSize: '3rem', marginBottom: '20px', background: 'linear-gradient(135deg, #D4AF37, #C5A46D)', 
                         backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent' }}>
-              Dubai Paradise
+              Dubai Paradais
             </h1>
             <p style={{ fontSize: '1.3rem', color: '#cbd5e1', marginBottom: '30px', maxWidth: '800px', margin: '0 auto 30px' }}>
               Discover The Ultimate Luxury Escape in Dubai - where modern architecture meets traditional hospitality and world-class experiences await your arrival.
