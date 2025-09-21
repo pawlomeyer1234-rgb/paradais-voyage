@@ -1,41 +1,44 @@
-'use client';
-
-import Link from 'next/link';
+"use client";
+import Link from "next/link";
 
 export default function DubaiPage() {
   return (
     <main className="pv-root">
-      {/* Navigation */}
-      <nav className="pv-nav">
+      <header className="pv-nav">
         <div className="pv-container nav-grid">
-          <Link href="/" className="brand">
-            <div className="brand-mark"></div>
-            <div className="brand-text">Paradais Voyage</div>
-            <div className="brand-tagline">Luxury Travel Concierge</div>
-          </Link>
-          <div className="nav-items">
+          <div className="brand">
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+              <span className="brand-mark" aria-hidden="true" />
+              <div>
+                <span className="brand-text">Paradais Voyage</span>
+                <div className="brand-tagline">Luxury Travel Concierge</div>
+              </div>
+            </Link>
+          </div>
+          <nav className="nav-items">
+            <Link href="/#experiences">Experiences</Link>
             <Link href="/#destinations">Destinations</Link>
             <Link href="/#about">About</Link>
-            <Link href="/#form">Contact</Link>
-          </div>
+            <Link className="btn-glass btn-sm" href="/#form">
+              Plan Your Sojourn
+            </Link>
+          </nav>
         </div>
-      </nav>
+      </header>
 
-      {/* Hero Section */}
       <section className="pv-hero">
         <div className="pv-container">
-          <div className="hero-grid">
-            <div className="hero-copy">
-              <h1>Dubai Luxury Experiences</h1>
-              <p style={{ fontSize: '1.3rem', color: '#cbd5e1', marginBottom: '30px', maxWidth: '800px', margin: '0 auto 30px' }}>
-                Discover The Ultimate Luxury Escape in Dubai - where modern architecture meets traditional hospitality and world-class experiences await your arrival.
-              </p>
-              <div className="cta-row">
-                <a className="btn-gold" href="#form">Plan Your Dubai Experience</a>
-              </div>
-            </div>
-            <div className="hero-visual">
-              <div className="hero-media glass-panel"></div>
+          <div className="glass-card" style={{ textAlign: 'center', padding: '60px 40px' }}>
+            <h1 style={{ fontSize: '3rem', marginBottom: '20px', background: 'linear-gradient(135deg, #D4AF37, #C5A46D)', 
+                        backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent' }}>
+              Dubai Paradise
+            </h1>
+            <p style={{ fontSize: '1.3rem', color: '#cbd5e1', marginBottom: '30px', maxWidth: '800px', margin: '0 auto 30px' }}>
+              Discover The Ultimate Luxury Escape in Dubai - where modern architecture meets traditional hospitality and world-class experiences await your arrival.
+            </p>
+            <div className="cta-row" style={{ justifyContent: 'center', gap: '20px' }}>
+              <Link className="btn-gold" href="/#form">Plan Your Dubai Escape</Link>
+              <Link className="btn-glass" href="/">Back to Home</Link>
             </div>
           </div>
         </div>
@@ -90,7 +93,7 @@ export default function DubaiPage() {
         <div className="pv-container">
           <div className="about-grid">
             <div className="about-card glass-card">
-              <h2>Why Choose Dubai with Paradais Voyage</h2>
+              <h2>Why Choose Dubai with Paradais Voyage?</h2>
               <p>Our Dubai expertise ensures you experience effortless luxury. From the moment you land at Dubai International Airport to the time you explore the city's wonders, every transfer, every booking, and every exclusive access is carefully managed.</p>
               
               <h3 style={{ marginTop: '30px', marginBottom: '15px' }}>What We Include:</h3>
@@ -101,22 +104,21 @@ export default function DubaiPage() {
                 <li>✔ 24/7 concierge support during your journey</li>
               </ul>
               
-              <a className="btn-gold" href="#form">Request Dubai Proposal</a>
+              <Link className="btn-gold" href="/#form">Start Planning Your Dubai Journey</Link>
             </div>
-            <div className="about-side" style={{ 
+            <div className="about-side glass-panel" style={{ 
               backgroundImage: 'url("/images/hero/Dubai.jpg")',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
-            }}></div>
+            }} />
           </div>
         </div>
       </section>
 
-      {/* Form Section */}
-      <section id="form" className="pv-section pv-form">
+      <section className="pv-section pv-form">
         <div className="pv-container">
           <form className="form-glass" onSubmit={(e) => e.preventDefault()}>
-            <h3>Plan Your Dubai Experience</h3>
+            <h3>Plan Your Dubai Escape</h3>
             <div className="grid">
               <input className="input-glass" placeholder="Full name" required />
               <input className="input-glass" placeholder="Email" type="email" required />
