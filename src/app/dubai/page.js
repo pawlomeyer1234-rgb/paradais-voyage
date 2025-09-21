@@ -106,11 +106,11 @@ export default function DubaiPage() {
               
               <Link className="btn-gold" href="/#form">Start Planning Your Dubai Journey</Link>
             </div>
-            <div className="about-side glass-panel" style={{ 
-              backgroundImage: 'url("/images/hero/Dubai.jpg")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }} />
+             <div className="about-side glass-panel" style={{ 
+               backgroundImage: 'url("/images/hero/City night.jpg")',
+               backgroundSize: 'cover',
+               backgroundPosition: 'center'
+             }} />
           </div>
         </div>
       </section>
