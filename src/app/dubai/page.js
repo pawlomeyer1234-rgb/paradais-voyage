@@ -75,16 +75,16 @@ export default function DubaiPage() {
               <p>Luxury vehicle transfers and private jet services arranged with precision, ensuring seamless transportation throughout your Dubai experience.</p>
             </article>
 
-            <article className="feature-card glass-card">
-              <div className="experience-images" style={{ height: '200px', marginBottom: '20px' }}>
-                <div className="experience-image" style={{ 
-                  backgroundImage: 'url("/images/hero/Plaza Samolot.jpg")',
-                  borderRadius: '12px'
-                }}></div>
-              </div>
-              <h3>Exclusive Experiences</h3>
-              <p>From private desert safaris to exclusive shopping experiences and world-class dining, we coordinate every detail for your perfect Dubai adventure.</p>
-            </article>
+             <article className="feature-card glass-card">
+               <div className="experience-images" style={{ height: '200px', marginBottom: '20px' }}>
+                 <div className="experience-image" style={{ 
+                   backgroundImage: 'url("/images/hero/Dubai Dinner.jpg")',
+                   borderRadius: '12px'
+                 }}></div>
+               </div>
+               <h3>Exclusive Experiences</h3>
+               <p>From private desert safaris to exclusive shopping experiences and world-class dining, we coordinate every detail for your perfect Dubai adventure.</p>
+             </article>
           </div>
         </div>
       </section>
