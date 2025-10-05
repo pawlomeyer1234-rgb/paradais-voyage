@@ -126,6 +126,11 @@ export default function Page(){
           <div>© {new Date().getFullYear()} Paradais Voyage</div>
           <div className="sep" />
           <div className="muted">Luxury Travel Concierge</div>
+          <div style={{ marginTop: '20px', display: 'flex', gap: '20px', justifyContent: 'center' }}>
+            <button className="btn-glass btn-sm" style={{ fontSize: '0.9rem', padding: '8px 16px' }}>Terms & Conditions</button>
+            <button className="btn-glass btn-sm" style={{ fontSize: '0.9rem', padding: '8px 16px' }}>Privacy Policy</button>
+            <button className="btn-glass btn-sm" style={{ fontSize: '0.9rem', padding: '8px 16px' }}>Cookies Policy</button>
+          </div>
         </div>
       </footer>
     </main>
