@@ -121,12 +121,14 @@ export default function Page(){
 
       <footer className="pv-footer">
         <div className="pv-container foot">
-          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button className="btn-glass btn-sm" style={{ fontSize: '0.9rem', padding: '8px 16px' }}>Terms & Conditions</button>
-            <button className="btn-glass btn-sm" style={{ fontSize: '0.9rem', padding: '8px 16px' }}>Privacy Policy</button>
-            <button className="btn-glass btn-sm" style={{ fontSize: '0.9rem', padding: '8px 16px' }}>Cookies Policy</button>
+          <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
+            <div>Terms & Conditions</div>
+            <div className="sep" />
+            <div>Privacy Policy</div>
+            <div className="sep" />
+            <div>Cookies Policy</div>
           </div>
-          <div style={{ marginTop: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
             <div>Contact: info@paradaisvoyage.com</div>
             <div className="sep" />
             <div>© {new Date().getFullYear()} Paradais Voyage</div>
