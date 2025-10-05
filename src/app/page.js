@@ -32,7 +32,7 @@ export default function Page(){
         <div className="pv-container hero-grid">
           <div className="hero-copy glass-card">
             <h1>Stay. Travel. Arrive in Style.</h1>
-            <p>Exclusive hotels. Private jets. Luxury transfer. Paradais Voyage - where travel becomes effortless.</p>
+            <p>Exclusive hotels. Luxury transfer. Paradais Voyage - where travel becomes effortless.</p>
             <div className="cta-row">
               <a className="btn-gold" href="#form">Start Your Journey</a>
               <a className="btn-glass" href="#experiences">Explore Experiences</a>
@@ -53,7 +53,7 @@ export default function Page(){
         <div className="pv-container cards">
           {[
             { title: "Luxury Hotels", copy: "Luxury reimagined: curated hotels offering silence, beauty, and perfection.", images: ["/images/hero/hotel 1.jpg", "/images/hero/hotel 2.jpg"] },
-            { title: "Private Transfer", copy: "Personal drivers, luxury vehicles, zero compromises.", images: ["/images/hero/Car 1.webp", "/images/hero/car 2.jpg"] }
+            { title: "Luxury Transfer", copy: "Personal drivers, luxury vehicles, zero compromises.", images: ["/images/hero/Car 1.webp", "/images/hero/car 2.jpg"] }
           ].map((c, i) => (
             <article key={i} className="feature-card glass-card">
               {c.images && (
