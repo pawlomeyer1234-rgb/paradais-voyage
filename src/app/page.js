@@ -55,7 +55,7 @@ export default function Page(){
             { title: "Luxury Hotels", copy: "Luxury reimagined: curated hotels offering silence, beauty, and perfection.", images: ["/images/hero/hotel 1.jpg", "/images/hero/hotel 2.jpg"] },
             { title: "Private Transport & Flights", copy: "Personal drivers, luxury vehicles, zero compromises.", images: ["/images/hero/Car 1.webp", "/images/hero/jet.webp"] }
           ].map((c, i) => (
-            <article key={i} className="feature-card glass-card">
+            <article key={i} className="feature-card glass-card" style={{ width: '400px', flex: '0 0 auto' }}>
               {c.images && (
                 <div className="experience-images">
                   {c.images.map((img, imgIndex) => (
