@@ -53,8 +53,7 @@ export default function Page(){
         <div className="pv-container cards">
           {[
             { title: "Luxury Hotels", copy: "Luxury reimagined: curated hotels offering silence, beauty, and perfection.", images: ["/images/hero/hotel 1.jpg", "/images/hero/hotel 2.jpg"] },
-            { title: "Private Transfer", copy: "Personal drivers, luxury vehicles, zero compromises.", images: ["/images/hero/Car 1.webp", "/images/hero/car 2.jpg"] },
-            { title: "Private Transport & Flights", copy: "From take-off to open waters—luxury travel, uninterrupted.", images: ["/images/hero/jet.webp", "/images/hero/Yacht.jpg"] }
+            { title: "Private Transfer", copy: "Personal drivers, luxury vehicles, zero compromises.", images: ["/images/hero/Car 1.webp", "/images/hero/car 2.jpg"] }
           ].map((c, i) => (
             <article key={i} className="feature-card glass-card">
               {c.images && (
