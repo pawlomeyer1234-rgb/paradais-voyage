@@ -18,7 +18,7 @@ export default function Page(){
             </div>
           </div>
           <nav className="nav-items">
-            <a href="#experiences">Experiences</a>
+            <a href="#experiences">Luxury Services</a>
             <a href="#destinations">Destinations</a>
             <a href="#about">About</a>
             <a className="btn-glass btn-sm" href="#form">
@@ -35,7 +35,7 @@ export default function Page(){
             <p>Exclusive hotels. Luxury transfer. Paradais Voyage - where travel becomes effortless.</p>
             <div className="cta-row">
               <a className="btn-gold" href="#form">Start Your Journey</a>
-              <a className="btn-glass" href="#experiences">Explore Experiences</a>
+              <a className="btn-glass" href="#experiences">Explore Luxury Services</a>
             </div>
             <ul className="trust-badges">
               <li className="badge-glass">Bespoke Itineraries</li>
