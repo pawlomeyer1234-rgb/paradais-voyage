@@ -128,13 +128,11 @@ export default function Page(){
             <div className="sep" />
             <div>Cookies Policy</div>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
-            <div>Contact: info@paradaisvoyage.com</div>
-            <div className="sep" />
-            <div>© {new Date().getFullYear()} Paradais Voyage</div>
-            <div className="sep" />
-            <div className="muted">Luxury Travel Concierge</div>
-          </div>
+          <div>Contact: info@paradaisvoyage.com</div>
+          <div className="sep" />
+          <div>© {new Date().getFullYear()} Paradais Voyage</div>
+          <div className="sep" />
+          <div className="muted">Luxury Travel Concierge</div>
         </div>
       </footer>
     </main>
