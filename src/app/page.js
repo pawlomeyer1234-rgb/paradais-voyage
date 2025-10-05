@@ -32,7 +32,7 @@ export default function Page(){
         <div className="pv-container hero-grid">
           <div className="hero-copy glass-card">
             <h1>Stay. Travel. Arrive in Style.</h1>
-            <p>Exclusive hotels. Luxury transfer. Paradais Voyage - where travel becomes effortless.</p>
+            <p>At Paradais Voyage we curate only two essentials of exceptional travel: exceptional stays and seamless private transport. From five-star suites and overwater villas to private jets and chauffeured limousines - we handle accommodation and transport with surgical precision. Please note: we do not provide excursions or activity bookings; our promise is perfect arrival, perfect stay, every time.</p>
             <div className="cta-row">
               <a className="btn-gold" href="#form">Start Your Journey</a>
               <a className="btn-glass" href="#experiences">Explore Luxury Services</a>
