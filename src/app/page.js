@@ -128,7 +128,7 @@ export default function Page(){
             <div className="sep" />
             <div className="muted">Luxury Travel Concierge</div>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
             <div>Terms & Conditions</div>
             <div className="sep" />
             <div>Privacy Policy</div>
