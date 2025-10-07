@@ -119,38 +119,16 @@ export default function Page(){
         </div>
       </section>
 
-      <footer className="pv-footer" style={{ display: 'block !important' }}>
-        <div style={{ 
-          display: 'flex !important', 
-          flexDirection: 'column !important', 
-          alignItems: 'center !important', 
-          justifyContent: 'center !important', 
-          gap: '0.75rem !important', 
-          width: '100% !important', 
-          padding: '2rem 0 !important',
-          textAlign: 'center !important'
-        }}>
-          <div style={{ 
-            display: 'flex !important', 
-            alignItems: 'center !important', 
-            justifyContent: 'center !important', 
-            gap: '0.5rem !important', 
-            flexWrap: 'wrap !important',
-            marginBottom: '0.5rem !important'
-          }}>
+      <footer className="pv-footer">
+        <div className="pv-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
             <div>Contact: info@paradaisvoyage.com</div>
             <div className="sep" />
             <div>© {new Date().getFullYear()} Paradais Voyage</div>
             <div className="sep" />
             <div className="muted">Luxury Travel Concierge</div>
           </div>
-          <div style={{ 
-            display: 'flex !important', 
-            alignItems: 'center !important', 
-            justifyContent: 'center !important', 
-            gap: '0.5rem !important', 
-            flexWrap: 'wrap !important'
-          }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
             <div>Terms & Conditions</div>
             <div className="sep" />
             <div>Privacy Policy</div>
