@@ -114,6 +114,34 @@ export default function Page(){
               <input className="input-glass" placeholder="Preferred dates" />
             </div>
             <textarea className="input-glass" rows={5} placeholder="Tell us the vibe, not just the place..." />
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', marginTop: '1rem' }}>
+              <input 
+                type="checkbox" 
+                id="terms-checkbox" 
+                required 
+                style={{ 
+                  marginTop: '0.25rem',
+                  accentColor: '#ffd700',
+                  transform: 'scale(1.2)'
+                }} 
+              />
+              <label htmlFor="terms-checkbox" style={{ color: '#fff', fontSize: '0.9rem', lineHeight: '1.4' }}>
+                I agree to the{' '}
+                <span 
+                  style={{ color: '#ffd700', cursor: 'pointer', textDecoration: 'underline' }}
+                  onClick={() => setTermsOpen(true)}
+                >
+                  Terms & Conditions
+                </span>
+                {' '}and{' '}
+                <span 
+                  style={{ color: '#ffd700', cursor: 'pointer', textDecoration: 'underline' }}
+                  onClick={() => setPrivacyOpen(true)}
+                >
+                  Privacy Policy
+                </span>
+              </label>
+            </div>
             <div className="form-foot">
               <button className="btn-gold" type="submit">Submit Request</button>
               <span className="fine">Response from a concierge within 24 hours.</span>
