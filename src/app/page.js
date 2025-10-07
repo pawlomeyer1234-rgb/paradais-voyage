@@ -4,6 +4,7 @@ import Link from "next/link";
 
 export default function Page(){
   const [open, setOpen] = useState(false);
+  const [privacyOpen, setPrivacyOpen] = useState(false);
   return (
     <main className="pv-root">
       <header className="pv-nav">
@@ -129,7 +130,7 @@ export default function Page(){
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
             <div>© {new Date().getFullYear()} Paradais Voyage</div>
             <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)', margin: '0.25rem 0' }}></div>
-            <div>Privacy Policy</div>
+            <div style={{ cursor: 'pointer' }} onClick={() => setPrivacyOpen(true)}>Privacy Policy</div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
             <div className="muted">Luxury Travel Concierge</div>
@@ -138,6 +139,96 @@ export default function Page(){
           </div>
         </div>
       </footer>
+
+      {privacyOpen && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000
+        }} onClick={() => setPrivacyOpen(false)}>
+          <div style={{
+            backgroundColor: 'rgba(255,255,255,0.1)',
+            backdropFilter: 'blur(20px)',
+            borderRadius: '20px',
+            padding: '2rem',
+            maxWidth: '600px',
+            maxHeight: '80vh',
+            overflow: 'auto',
+            border: '1px solid rgba(255,255,255,0.2)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
+          }} onClick={(e) => e.stopPropagation()}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+              <h2 style={{ margin: 0, color: '#fff', fontSize: '1.5rem' }}>PRIVACY POLICY</h2>
+              <button 
+                onClick={() => setPrivacyOpen(false)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#fff',
+                  fontSize: '1.5rem',
+                  cursor: 'pointer',
+                  padding: '0.5rem'
+                }}
+              >
+                ×
+              </button>
+            </div>
+            <div style={{ color: '#fff', lineHeight: '1.6' }}>
+              <p><strong>Privacy Policy – Paradais Voyage Luxury Travel Concierge</strong></p>
+              <p><em>Last updated: 01/01/2026</em></p>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>1. Introduction</h3>
+              <p>Paradais Voyage Luxury Travel Concierge ("we", "our", "us") respects your privacy and is committed to protecting your personal data.</p>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>2. Data We Collect</h3>
+              <p>We may collect the following data:</p>
+              <ul>
+                <li>Name, email, phone number</li>
+                <li>Travel preferences (e.g. destination, dates, accommodation type)</li>
+                <li>Passport details where required for bookings</li>
+                <li>Payment preferences (only if relevant for service fees)</li>
+              </ul>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>3. How We Use Your Data</h3>
+              <p>We use your personal data to:</p>
+              <ul>
+                <li>Process enquiries and bookings</li>
+                <li>Communicate with you regarding your travel arrangements</li>
+                <li>Share relevant information with our <strong>trusted suppliers</strong> (hotels, transport companies) solely for the purpose of your booking</li>
+                <li>Comply with legal or regulatory requirements</li>
+              </ul>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>4. Sharing Your Data</h3>
+              <ul>
+                <li>We share your data <strong>only with suppliers necessary to fulfil your booking</strong>.</li>
+                <li>We do not sell or trade your personal data.</li>
+              </ul>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>5. Data Security</h3>
+              <ul>
+                <li>We store personal data securely and limit access to authorised staff only.</li>
+                <li>We implement technical measures to protect your data against unauthorised access or loss.</li>
+              </ul>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>6. Your Rights</h3>
+              <p>Under UK GDPR, you have the right to:</p>
+              <ul>
+                <li>Request access to your personal data</li>
+                <li>Request correction or deletion of your data</li>
+                <li>Withdraw consent for data processing at any time</li>
+              </ul>
+              <p>To exercise your rights, contact us at: <a href="mailto:info@paradaisvoyage.com" style={{ color: '#ffd700' }}>info@paradaisvoyage.com</a></p>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
