@@ -6,6 +6,7 @@ export default function Page(){
   const [open, setOpen] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false);
   const [termsOpen, setTermsOpen] = useState(false);
+  const [cookiesOpen, setCookiesOpen] = useState(false);
   return (
     <main className="pv-root">
       <header className="pv-nav">
@@ -136,7 +137,7 @@ export default function Page(){
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
             <div className="muted">Luxury Travel Concierge</div>
             <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)', margin: '0.25rem 0' }}></div>
-            <div>Cookies Policy</div>
+            <div style={{ cursor: 'pointer' }} onClick={() => setCookiesOpen(true)}>Cookies Policy</div>
           </div>
         </div>
       </footer>
@@ -315,6 +316,72 @@ export default function Page(){
               
               <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>7. Governing Law</h3>
               <p>These Terms shall be governed by and construed in accordance with the laws of <strong>England and Wales</strong></p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {cookiesOpen && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000
+        }} onClick={() => setCookiesOpen(false)}>
+          <div style={{
+            backgroundColor: 'rgba(255,255,255,0.1)',
+            backdropFilter: 'blur(20px)',
+            borderRadius: '20px',
+            padding: '2rem',
+            maxWidth: '600px',
+            maxHeight: '80vh',
+            overflow: 'auto',
+            border: '1px solid rgba(255,255,255,0.2)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
+          }} onClick={(e) => e.stopPropagation()}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+              <h2 style={{ margin: 0, color: '#fff', fontSize: '1.5rem' }}>COOKIES POLICY</h2>
+              <button 
+                onClick={() => setCookiesOpen(false)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#fff',
+                  fontSize: '1.5rem',
+                  cursor: 'pointer',
+                  padding: '0.5rem'
+                }}
+              >
+                ×
+              </button>
+            </div>
+            <div style={{ color: '#fff', lineHeight: '1.6' }}>
+              <p><strong>Cookies Policy – Paradais Voyage Luxury Travel Concierge</strong></p>
+              <p><em>Last updated: 01/01/2026</em></p>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>1. What Are Cookies</h3>
+              <p>Cookies are small text files stored on your device when you visit our website.</p>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>2. How We Use Cookies</h3>
+              <p>We use cookies to:</p>
+              <ul>
+                <li>Improve website functionality and user experience</li>
+                <li>Analyse website traffic through tools such as <strong>Google Analytics</strong></li>
+                <li>Remember your preferences (e.g. form details)</li>
+              </ul>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>3. Managing Cookies</h3>
+              <p>You can manage or disable cookies in your browser settings.</p>
+              <p>Please note that disabling cookies may affect the functionality of our website.</p>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>4. Contact</h3>
+              <p>If you have any questions about our Cookies Policy, please contact us at: <a href="mailto:info@paradaisvoyage.com" style={{ color: '#ffd700' }}>info@paradaisvoyage.com</a></p>
             </div>
           </div>
         </div>
