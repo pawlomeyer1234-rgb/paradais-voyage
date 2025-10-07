@@ -120,15 +120,15 @@ export default function Page(){
       </section>
 
       <footer className="pv-footer">
-        <div className="pv-container foot">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div className="pv-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+          <div className="foot">
             <div>Contact: info@paradaisvoyage.com</div>
             <div className="sep" />
             <div>© {new Date().getFullYear()} Paradais Voyage</div>
             <div className="sep" />
             <div className="muted">Luxury Travel Concierge</div>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center', marginTop: '0.5rem' }}>
+          <div className="foot">
             <div>Terms & Conditions</div>
             <div className="sep" />
             <div>Privacy Policy</div>
