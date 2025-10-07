@@ -120,19 +120,17 @@ export default function Page(){
       </section>
 
       <footer className="pv-footer">
-        <div className="pv-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+        <div className="pv-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '2rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.5rem' }}>
             <div>Contact: info@paradaisvoyage.com</div>
-            <div className="sep" />
-            <div>© {new Date().getFullYear()} Paradais Voyage</div>
-            <div className="sep" />
-            <div className="muted">Luxury Travel Concierge</div>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
             <div>Terms & Conditions</div>
-            <div className="sep" />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+            <div>© {new Date().getFullYear()} Paradais Voyage</div>
             <div>Privacy Policy</div>
-            <div className="sep" />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
+            <div className="muted">Luxury Travel Concierge</div>
             <div>Cookies Policy</div>
           </div>
         </div>
