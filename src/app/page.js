@@ -123,14 +123,17 @@ export default function Page(){
         <div className="pv-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '2rem' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.5rem' }}>
             <div>Contact: info@paradaisvoyage.com</div>
+            <div className="sep" />
             <div>Terms & Conditions</div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
             <div>© {new Date().getFullYear()} Paradais Voyage</div>
+            <div className="sep" />
             <div>Privacy Policy</div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
             <div className="muted">Luxury Travel Concierge</div>
+            <div className="sep" />
             <div>Cookies Policy</div>
           </div>
         </div>
