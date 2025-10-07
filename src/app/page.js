@@ -126,7 +126,7 @@ export default function Page(){
           <div>© {new Date().getFullYear()} Paradais Voyage</div>
           <div className="sep" />
           <div className="muted">Luxury Travel Concierge</div>
-          <br />
+          <div className="sep" />
           <div>Terms & Conditions</div>
           <div className="sep" />
           <div>Privacy Policy</div>
