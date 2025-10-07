@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function Page(){
   const [open, setOpen] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false);
+  const [termsOpen, setTermsOpen] = useState(false);
   return (
     <main className="pv-root">
       <header className="pv-nav">
@@ -125,7 +126,7 @@ export default function Page(){
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.5rem' }}>
             <div>Contact: info@paradaisvoyage.com</div>
             <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)', margin: '0.25rem 0' }}></div>
-            <div>Terms & Conditions</div>
+            <div style={{ cursor: 'pointer' }} onClick={() => setTermsOpen(true)}>Terms & Conditions</div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
             <div>© {new Date().getFullYear()} Paradais Voyage</div>
@@ -225,6 +226,95 @@ export default function Page(){
                 <li>Withdraw consent for data processing at any time</li>
               </ul>
               <p>To exercise your rights, contact us at: <a href="mailto:info@paradaisvoyage.com" style={{ color: '#ffd700' }}>info@paradaisvoyage.com</a></p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {termsOpen && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000
+        }} onClick={() => setTermsOpen(false)}>
+          <div style={{
+            backgroundColor: 'rgba(255,255,255,0.1)',
+            backdropFilter: 'blur(20px)',
+            borderRadius: '20px',
+            padding: '2rem',
+            maxWidth: '600px',
+            maxHeight: '80vh',
+            overflow: 'auto',
+            border: '1px solid rgba(255,255,255,0.2)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
+          }} onClick={(e) => e.stopPropagation()}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+              <h2 style={{ margin: 0, color: '#fff', fontSize: '1.5rem' }}>TERMS & CONDITIONS</h2>
+              <button 
+                onClick={() => setTermsOpen(false)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#fff',
+                  fontSize: '1.5rem',
+                  cursor: 'pointer',
+                  padding: '0.5rem'
+                }}
+              >
+                ×
+              </button>
+            </div>
+            <div style={{ color: '#fff', lineHeight: '1.6' }}>
+              <p><strong>Terms & Conditions – Paradais Voyage Luxury Travel Concierge</strong></p>
+              <p><em>Last updated: 01/01/2026</em></p>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>1. Introduction</h3>
+              <p>Welcome to Paradais Voyage Luxury Travel Concierge ("we", "our", "us").</p>
+              <p>By accessing and using our website <a href="http://www.paradaisvoyage.com" style={{ color: '#ffd700' }}>www.paradaisvoyage.com</a> and requesting our services, you agree to these Terms & Conditions.</p>
+              <p>If you do not agree with these terms, please do not use our services.</p>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>2. Our Services</h3>
+              <ul>
+                <li>We provide <strong>concierge and intermediary services</strong> for luxury travel focused exclusively on:</li>
+                <ul style={{ marginLeft: '1rem', marginTop: '0.5rem' }}>
+                  <li><strong>Luxury hotel reservations</strong></li>
+                  <li><strong>Private transfers and flights</strong> (limousines, private cars, seaplanes, jets)</li>
+                </ul>
+                <li>We do <strong>not</strong> operate hotels, airlines, yachts or transport services directly.</li>
+                <li>We do <strong>not</strong> provide excursions, activities or guided tours.</li>
+              </ul>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>3. Payments</h3>
+              <ul>
+                <li>Clients pay <strong>suppliers directly</strong> for accommodation and transport, unless otherwise agreed in writing.</li>
+                <li>Paradais Voyage may charge a <strong>service fee</strong> or earn a <strong>commission from suppliers</strong>; this will always be disclosed before confirming the booking.</li>
+              </ul>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>4. Cancellations & Refunds</h3>
+              <ul>
+                <li>All cancellations and refunds are subject to <strong>supplier's policies</strong> (e.g. hotel or airline).</li>
+                <li>Our <strong>service fees and commissions are non-refundable</strong> once a booking is confirmed.</li>
+              </ul>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>5. Limitation of Liability</h3>
+              <ul>
+                <li>Paradais Voyage acts solely as an <strong>intermediary</strong>.</li>
+                <li>We are not liable for service failures, delays, cancellations, accidents, or damages caused by third-party suppliers.</li>
+                <li>Our maximum liability is limited to any direct service fee paid to us.</li>
+              </ul>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>6. Privacy & Data</h3>
+              <p>We collect and process personal data in accordance with our <strong>Privacy Policy</strong>.</p>
+              
+              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>7. Governing Law</h3>
+              <p>These Terms shall be governed by and construed in accordance with the laws of <strong>England and Wales</strong></p>
             </div>
           </div>
         </div>
