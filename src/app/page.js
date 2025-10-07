@@ -120,8 +120,8 @@ export default function Page(){
       </section>
 
       <footer className="pv-footer">
-        <div className="pv-container" style={{ display: 'block', textAlign: 'center' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+        <div className="pv-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
             <div>Contact: info@paradaisvoyage.com</div>
             <div className="sep" />
             <div>© {new Date().getFullYear()} Paradais Voyage</div>
