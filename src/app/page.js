@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Page(){
@@ -7,6 +7,15 @@ export default function Page(){
   const [privacyOpen, setPrivacyOpen] = useState(false);
   const [termsOpen, setTermsOpen] = useState(false);
   const [cookiesOpen, setCookiesOpen] = useState(false);
+  const [cookiesConsent, setCookiesConsent] = useState(false);
+
+  useEffect(() => {
+    const consent = localStorage.getItem('cookiesConsent');
+    if (consent === 'accepted') {
+      setCookiesConsent(true);
+    }
+  }, []);
+
   return (
     <main className="pv-root">
       <header className="pv-nav">
@@ -411,6 +420,90 @@ export default function Page(){
               <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>4. Contact</h3>
               <p>If you have any questions about our Cookies Policy, please contact us at: <a href="mailto:info@paradaisvoyage.com" style={{ color: '#ffd700' }}>info@paradaisvoyage.com</a></p>
             </div>
+          </div>
+        </div>
+      )}
+
+      {!cookiesConsent && (
+        <div style={{
+          position: 'fixed',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: 'rgba(0,0,0,0.85)',
+          backdropFilter: 'blur(20px)',
+          borderTop: '1px solid rgba(255,255,255,0.2)',
+          padding: '1.5rem 2rem',
+          zIndex: 1001,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '2rem',
+          flexWrap: 'wrap'
+        }}>
+          <div style={{ color: '#fff', fontSize: '0.9rem', lineHeight: '1.5', flex: '1', minWidth: '300px' }}>
+            We use cookies to improve your experience and analyse website traffic. By continuing to use this site, you accept our{' '}
+            <span 
+              style={{ color: '#ffd700', cursor: 'pointer', textDecoration: 'underline' }}
+              onClick={() => setCookiesOpen(true)}
+            >
+              Cookies Policy
+            </span>
+            .
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexShrink: 0 }}>
+            <button
+              onClick={() => setCookiesOpen(true)}
+              style={{
+                background: 'transparent',
+                border: '1px solid rgba(255,255,255,0.3)',
+                color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontSize: '0.9rem',
+                transition: 'all 0.3s ease',
+                backdropFilter: 'blur(10px)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.borderColor = '#ffd700';
+                e.target.style.color = '#ffd700';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.borderColor = 'rgba(255,255,255,0.3)';
+                e.target.style.color = '#fff';
+              }}
+            >
+              Manage Preferences
+            </button>
+            <button
+              onClick={() => {
+                setCookiesConsent(true);
+                localStorage.setItem('cookiesConsent', 'accepted');
+              }}
+              style={{
+                background: 'linear-gradient(135deg, #ffd700, #ffed4e)',
+                border: 'none',
+                color: '#000',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontSize: '0.9rem',
+                fontWeight: '600',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 4px 15px rgba(255, 215, 0, 0.3)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.transform = 'translateY(-2px)';
+                e.target.style.boxShadow = '0 6px 20px rgba(255, 215, 0, 0.4)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = '0 4px 15px rgba(255, 215, 0, 0.3)';
+              }}
+            >
+              Accept
+            </button>
           </div>
         </div>
       )}
