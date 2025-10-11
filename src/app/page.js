@@ -8,6 +8,13 @@ export default function Page(){
   const [termsOpen, setTermsOpen] = useState(false);
   const [cookiesOpen, setCookiesOpen] = useState(false);
   const [cookiesConsent, setCookiesConsent] = useState(false);
+  const [preferencesOpen, setPreferencesOpen] = useState(false);
+  const [cookiePreferences, setCookiePreferences] = useState({
+    essential: true, // always true
+    performance: false,
+    functional: false,
+    marketing: false
+  });
 
   useEffect(() => {
     const consent = localStorage.getItem('cookiesConsent');
@@ -453,7 +460,7 @@ export default function Page(){
           </div>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexShrink: 0 }}>
             <button
-              onClick={() => setCookiesOpen(true)}
+              onClick={() => setPreferencesOpen(true)}
               style={{
                 background: 'transparent',
                 border: '1px solid rgba(255,255,255,0.3)',
@@ -504,6 +511,253 @@ export default function Page(){
             >
               Accept
             </button>
+          </div>
+        </div>
+      )}
+
+      {preferencesOpen && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.6)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1002,
+          animation: 'fadeIn 0.3s ease-out'
+        }} onClick={() => setPreferencesOpen(false)}>
+          <div style={{
+            backgroundColor: 'rgba(255,255,255,0.95)',
+            backdropFilter: 'blur(20px)',
+            borderRadius: '20px',
+            padding: '2.5rem',
+            maxWidth: '500px',
+            width: '90%',
+            maxHeight: '80vh',
+            overflow: 'auto',
+            border: '1px solid rgba(255,215,0,0.3)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+            animation: 'slideUp 0.3s ease-out'
+          }} onClick={(e) => e.stopPropagation()}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+              <h2 style={{ margin: 0, color: '#000', fontSize: '1.8rem', fontWeight: '600' }}>Cookie Preferences</h2>
+              <button 
+                onClick={() => setPreferencesOpen(false)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#666',
+                  fontSize: '1.5rem',
+                  cursor: 'pointer',
+                  padding: '0.5rem',
+                  borderRadius: '50%',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.backgroundColor = 'rgba(0,0,0,0.1)';
+                  e.target.style.color = '#000';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                  e.target.style.color = '#666';
+                }}
+              >
+                ×
+              </button>
+            </div>
+            
+            <div style={{ color: '#333', lineHeight: '1.6', marginBottom: '2rem' }}>
+              <p style={{ marginBottom: '2rem', fontSize: '1rem' }}>
+                You can choose which types of cookies you allow on this website. Essential cookies are always active because they are required for basic functionality.
+              </p>
+              
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                {/* Essential Cookies - Always Active */}
+                <div style={{ 
+                  padding: '1.5rem', 
+                  backgroundColor: 'rgba(255,215,0,0.1)', 
+                  borderRadius: '12px',
+                  border: '2px solid rgba(255,215,0,0.3)'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                    <div style={{
+                      width: '20px',
+                      height: '20px',
+                      backgroundColor: '#ffd700',
+                      borderRadius: '4px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginTop: '2px',
+                      flexShrink: 0
+                    }}>
+                      <span style={{ color: '#000', fontSize: '12px', fontWeight: 'bold' }}>✓</span>
+                    </div>
+                    <div>
+                      <h3 style={{ margin: '0 0 0.5rem 0', color: '#000', fontSize: '1.1rem', fontWeight: '600' }}>
+                        Essential Cookies (always active)
+                      </h3>
+                      <p style={{ margin: 0, color: '#666', fontSize: '0.9rem' }}>
+                        Used to make the website function properly (cannot be disabled).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Performance Cookies */}
+                <div style={{ 
+                  padding: '1.5rem', 
+                  backgroundColor: 'rgba(255,255,255,0.5)', 
+                  borderRadius: '12px',
+                  border: '1px solid rgba(0,0,0,0.1)'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                    <input
+                      type="checkbox"
+                      checked={cookiePreferences.performance}
+                      onChange={(e) => setCookiePreferences(prev => ({ ...prev, performance: e.target.checked }))}
+                      style={{
+                        width: '20px',
+                        height: '20px',
+                        accentColor: '#ffd700',
+                        marginTop: '2px',
+                        flexShrink: 0
+                      }}
+                    />
+                    <div>
+                      <h3 style={{ margin: '0 0 0.5rem 0', color: '#000', fontSize: '1.1rem', fontWeight: '600' }}>
+                        Performance / Analytics Cookies
+                      </h3>
+                      <p style={{ margin: 0, color: '#666', fontSize: '0.9rem' }}>
+                        Help us improve our website by collecting anonymous usage data (e.g., Google Analytics).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Functional Cookies */}
+                <div style={{ 
+                  padding: '1.5rem', 
+                  backgroundColor: 'rgba(255,255,255,0.5)', 
+                  borderRadius: '12px',
+                  border: '1px solid rgba(0,0,0,0.1)'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                    <input
+                      type="checkbox"
+                      checked={cookiePreferences.functional}
+                      onChange={(e) => setCookiePreferences(prev => ({ ...prev, functional: e.target.checked }))}
+                      style={{
+                        width: '20px',
+                        height: '20px',
+                        accentColor: '#ffd700',
+                        marginTop: '2px',
+                        flexShrink: 0
+                      }}
+                    />
+                    <div>
+                      <h3 style={{ margin: '0 0 0.5rem 0', color: '#000', fontSize: '1.1rem', fontWeight: '600' }}>
+                        Functional Cookies
+                      </h3>
+                      <p style={{ margin: 0, color: '#666', fontSize: '0.9rem' }}>
+                        Remember your preferences, such as language or display settings.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Marketing Cookies */}
+                <div style={{ 
+                  padding: '1.5rem', 
+                  backgroundColor: 'rgba(255,255,255,0.5)', 
+                  borderRadius: '12px',
+                  border: '1px solid rgba(0,0,0,0.1)'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                    <input
+                      type="checkbox"
+                      checked={cookiePreferences.marketing}
+                      onChange={(e) => setCookiePreferences(prev => ({ ...prev, marketing: e.target.checked }))}
+                      style={{
+                        width: '20px',
+                        height: '20px',
+                        accentColor: '#ffd700',
+                        marginTop: '2px',
+                        flexShrink: 0
+                      }}
+                    />
+                    <div>
+                      <h3 style={{ margin: '0 0 0.5rem 0', color: '#000', fontSize: '1.1rem', fontWeight: '600' }}>
+                        Marketing Cookies
+                      </h3>
+                      <p style={{ margin: 0, color: '#666', fontSize: '0.9rem' }}>
+                        Used to show you relevant ads and content based on your interests.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-end' }}>
+              <button
+                onClick={() => setPreferencesOpen(false)}
+                style={{
+                  background: 'transparent',
+                  border: '1px solid #ccc',
+                  color: '#666',
+                  padding: '0.75rem 1.5rem',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  fontSize: '0.9rem',
+                  fontWeight: '500',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.borderColor = '#999';
+                  e.target.style.color = '#333';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.borderColor = '#ccc';
+                  e.target.style.color = '#666';
+                }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => {
+                  localStorage.setItem('cookiePreferences', JSON.stringify(cookiePreferences));
+                  localStorage.setItem('cookiesConsent', 'accepted');
+                  setCookiesConsent(true);
+                  setPreferencesOpen(false);
+                }}
+                style={{
+                  background: 'linear-gradient(135deg, #ffd700, #ffed4e)',
+                  border: 'none',
+                  color: '#000',
+                  padding: '0.75rem 1.5rem',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  fontSize: '0.9rem',
+                  fontWeight: '600',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 4px 15px rgba(255, 215, 0, 0.3)'
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.transform = 'translateY(-2px)';
+                  e.target.style.boxShadow = '0 6px 20px rgba(255, 215, 0, 0.4)';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.transform = 'translateY(0)';
+                  e.target.style.boxShadow = '0 4px 15px rgba(255, 215, 0, 0.3)';
+                }}
+              >
+                Save Preferences
+              </button>
+            </div>
           </div>
         </div>
       )}
