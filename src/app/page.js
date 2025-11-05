@@ -121,15 +121,36 @@ export default function Page(){
 
       <section id="form" className="pv-section pv-form">
         <div className="pv-container">
-          <form className="form-glass" onSubmit={(e) => e.preventDefault()}>
+          <form 
+            className="form-glass" 
+            action="https://api.web3forms.com/submit" 
+            method="POST"
+            onSubmit={async (e) => {
+              e.preventDefault();
+              const form = e.target;
+              const formData = new FormData(form);
+              const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData
+              });
+              const data = await response.json();
+              if (data.success) {
+                alert('Thank you! Your request has been submitted. We will respond within 24 hours.');
+                form.reset();
+              } else {
+                alert('There was an error submitting your request. Please try again.');
+              }
+            }}
+          >
+            <input type="hidden" name="access_key" value="abf23d8e-c302-4ef2-873a-a62ce6e29277" />
             <h3>Let's Plan Your Next Sojourn</h3>
             <div className="grid">
-              <input className="input-glass" placeholder="Full name" required />
-              <input className="input-glass" placeholder="Email" type="email" required />
-              <input className="input-glass" placeholder="Phone (optional)" />
-              <input className="input-glass" placeholder="Preferred dates" />
+              <input className="input-glass" name="name" placeholder="Full name" required />
+              <input className="input-glass" name="email" placeholder="Email" type="email" required />
+              <input className="input-glass" name="phone" placeholder="Phone (optional)" />
+              <input className="input-glass" name="preferred_dates" placeholder="Preferred dates" />
             </div>
-            <textarea className="input-glass" rows={5} placeholder="Tell us the vibe, not just the place..." />
+            <textarea className="input-glass" name="message" rows={5} placeholder="Tell us the vibe, not just the place..." required />
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', marginTop: '1rem' }}>
               <input 
                 type="checkbox" 
