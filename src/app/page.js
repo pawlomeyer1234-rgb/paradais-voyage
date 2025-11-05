@@ -9,6 +9,7 @@ export default function Page(){
   const [cookiesOpen, setCookiesOpen] = useState(false);
   const [cookiesConsent, setCookiesConsent] = useState(false);
   const [preferencesOpen, setPreferencesOpen] = useState(false);
+  const [formSuccess, setFormSuccess] = useState(false);
   const [cookiePreferences, setCookiePreferences] = useState({
     essential: true, // always true
     performance: false,
@@ -135,8 +136,8 @@ export default function Page(){
               });
               const data = await response.json();
               if (data.success) {
-                alert('Thank you! Your request has been submitted. We will respond within 24 hours.');
                 form.reset();
+                setFormSuccess(true);
               } else {
                 alert('There was an error submitting your request. Please try again.');
               }
@@ -779,6 +780,79 @@ export default function Page(){
                 Save Preferences
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {formSuccess && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000
+        }} onClick={() => setFormSuccess(false)}>
+          <div style={{
+            backgroundColor: 'rgba(255,255,255,0.1)',
+            backdropFilter: 'blur(20px)',
+            borderRadius: '20px',
+            padding: '2rem',
+            maxWidth: '500px',
+            width: '90%',
+            border: '1px solid rgba(255,255,255,0.2)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
+            textAlign: 'center'
+          }} onClick={(e) => e.stopPropagation()}>
+            <div style={{ marginBottom: '1.5rem' }}>
+              <div style={{
+                width: '64px',
+                height: '64px',
+                margin: '0 auto 1rem',
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, #ffd700, #ffed4e)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '2rem',
+                color: '#000'
+              }}>
+                ✓
+              </div>
+              <h2 style={{ margin: 0, color: '#fff', fontSize: '1.5rem', marginBottom: '0.5rem' }}>Thank you!</h2>
+              <p style={{ margin: 0, color: '#fff', fontSize: '1rem', lineHeight: '1.6' }}>
+                Your request has been submitted. We will respond within 24 hours.
+              </p>
+            </div>
+            <button
+              onClick={() => setFormSuccess(false)}
+              style={{
+                background: 'linear-gradient(135deg, #ffd700, #ffed4e)',
+                border: 'none',
+                color: '#000',
+                padding: '0.75rem 2rem',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontSize: '0.9rem',
+                fontWeight: '600',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 4px 15px rgba(255, 215, 0, 0.3)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.transform = 'translateY(-2px)';
+                e.target.style.boxShadow = '0 6px 20px rgba(255, 215, 0, 0.4)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = '0 4px 15px rgba(255, 215, 0, 0.3)';
+              }}
+            >
+              Close
+            </button>
           </div>
         </div>
       )}
