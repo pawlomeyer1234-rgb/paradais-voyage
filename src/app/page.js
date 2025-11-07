@@ -339,49 +339,80 @@ export default function Page(){
               </button>
             </div>
             <div style={{ color: '#fff', lineHeight: '1.6' }}>
-              <p><strong>Terms & Conditions – Paradais Voyage Luxury Travel Concierge</strong></p>
-              <p><em>Last updated: 01/01/2026</em></p>
-              
-              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>1. Introduction</h3>
+              <p style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.25rem' }}>Terms & Conditions – Paradais Voyage Luxury Travel Concierge</p>
+              <p style={{ fontStyle: 'italic', opacity: 0.85 }}>Last updated: 01/01/2026</p>
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginTop: 0, marginBottom: '0.75rem', fontSize: '1.1rem' }}>1. Introduction</h3>
               <p>Welcome to Paradais Voyage Luxury Travel Concierge ("we", "our", "us").</p>
-              <p>By accessing and using our website <a href="http://www.paradaisvoyage.com" style={{ color: '#ffd700' }}>www.paradaisvoyage.com</a> and requesting our services, you agree to these Terms & Conditions.</p>
+              <p>
+                By accessing and using our website{' '}
+                <a href="https://www.paradaisvoyage.com" style={{ color: '#ffd700' }}>www.paradaisvoyage.com</a>{' '}
+                and requesting our services, you agree to these Terms &amp; Conditions.
+              </p>
               <p>If you do not agree with these terms, please do not use our services.</p>
-              
-              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>2. Our Services</h3>
-              <ul>
-                <li>We provide <strong>concierge and intermediary services</strong> for luxury travel focused exclusively on:</li>
-                <ul style={{ marginLeft: '1rem', marginTop: '0.5rem' }}>
-                  <li><strong>Luxury hotel reservations</strong></li>
-                  <li><strong>Private transfers and flights</strong> (limousines, private cars, seaplanes, jets)</li>
-                </ul>
-                <li>We do <strong>not</strong> operate hotels, airlines, yachts or transport services directly.</li>
-                <li>We do <strong>not</strong> provide excursions, activities or guided tours.</li>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>2. Our Services</h3>
+              <p>We provide concierge and intermediary services for luxury travel focused exclusively on:</p>
+              <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
+                <li>Luxury hotel reservations</li>
+                <li>Private transfers and flights (limousines, private cars, seaplanes, jets)</li>
               </ul>
-              
-              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>3. Payments</h3>
-              <ul>
-                <li>Clients pay <strong>suppliers directly</strong> for accommodation and transport, unless otherwise agreed in writing.</li>
-                <li>Paradais Voyage may charge a <strong>service fee</strong> or earn a <strong>commission from suppliers</strong>; this will always be disclosed before confirming the booking.</li>
+              <p>We do not operate hotels, airlines, yachts or transport services directly.</p>
+              <p>We do not provide excursions, activities or guided tours.</p>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>3. Payments</h3>
+              <p>All payments are securely processed via <strong>Stripe Connect</strong>, a third-party payment platform regulated by the <strong>Financial Conduct Authority (FCA)</strong> in the United Kingdom.</p>
+              <p>When you make a payment through our website or via a payment link, the total amount is automatically distributed between Paradais Voyage and the relevant suppliers according to our agreements.</p>
+              <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
+                <li>Paradais Voyage may charge a <strong>service fee (markup)</strong> or earn a <strong>commission from suppliers</strong>; this will always be clearly disclosed before confirming the booking.</li>
+                <li>We do not store or have direct access to your card details.</li>
+                <li>All transactions are handled by <strong>Stripe Payments UK Ltd</strong> in accordance with UK data protection laws.</li>
               </ul>
-              
-              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>4. Cancellations & Refunds</h3>
-              <ul>
-                <li>All cancellations and refunds are subject to <strong>supplier's policies</strong> (e.g. hotel or airline).</li>
-                <li>Our <strong>service fees and commissions are non-refundable</strong> once a booking is confirmed.</li>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>4. Cancellations &amp; Refunds</h3>
+              <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
+                <li>All cancellations and refunds are subject to each supplier’s individual policy (e.g. hotel or airline).</li>
+                <li>Our service fees and commissions are <strong>non-refundable</strong> once a booking is confirmed, unless otherwise agreed in writing.</li>
               </ul>
-              
-              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>5. Limitation of Liability</h3>
-              <ul>
-                <li>Paradais Voyage acts solely as an <strong>intermediary</strong>.</li>
-                <li>We are not liable for service failures, delays, cancellations, accidents, or damages caused by third-party suppliers.</li>
-                <li>Our maximum liability is limited to any direct service fee paid to us.</li>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>5. Limitation of Liability</h3>
+              <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
+                <li>Paradais Voyage acts solely as an <strong>intermediary</strong> between the client and third-party suppliers.</li>
+                <li>We are not liable for service failures, delays, cancellations, accidents, or damages caused by third-party providers.</li>
+                <li>Our maximum liability is limited to the direct service fee paid to us.</li>
               </ul>
-              
-              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>6. Privacy & Data</h3>
-              <p>We collect and process personal data in accordance with our <strong>Privacy Policy</strong>.</p>
-              
-              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>7. Governing Law</h3>
-              <p>These Terms shall be governed by and construed in accordance with the laws of <strong>England and Wales</strong></p>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>6. Privacy &amp; Data</h3>
+              <p>
+                We collect and process personal data in accordance with our{' '}
+                <a href="#privacy" style={{ color: '#ffd700' }}>Privacy Policy</a>.
+              </p>
+              <p>Stripe may also process payment data on our behalf. For details, please refer to{' '}
+                <a href="https://stripe.com/gb/privacy" style={{ color: '#ffd700' }} target="_blank" rel="noopener noreferrer">Stripe’s Privacy Policy</a>.
+              </p>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>7. Governing Law</h3>
+              <p>These Terms shall be governed by and construed in accordance with the laws of <strong>England and Wales</strong>.</p>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>8. Secure Payments Notice (required by Stripe)</h3>
+              <p>All payments made via Paradais Voyage are processed by Stripe Connect.</p>
+              <p>Stripe is responsible for the secure collection and transfer of funds between clients, Paradais Voyage, and suppliers.</p>
+              <p>By proceeding with a payment, you agree to these Terms and acknowledge that Stripe may distribute your payment accordingly.</p>
             </div>
           </div>
         </div>
@@ -814,12 +845,12 @@ export default function Page(){
                 height: '64px',
                 margin: '0 auto 1rem',
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #ffd700, #ffed4e)',
+                background: 'linear-gradient(135deg, #D4AF37, #C5A46D 55%, #BFA46A)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontSize: '2rem',
-                color: '#000'
+                color: '#1a1a1a'
               }}>
                 ✓
               </div>
@@ -831,24 +862,27 @@ export default function Page(){
             <button
               onClick={() => setFormSuccess(false)}
               style={{
-                background: 'linear-gradient(135deg, #ffd700, #ffed4e)',
+                background: 'linear-gradient(135deg, #D4AF37, #C5A46D 55%, #BFA46A)',
                 border: 'none',
-                color: '#000',
+                color: '#1a1a1a',
                 padding: '0.75rem 2rem',
-                borderRadius: '8px',
+                borderRadius: '14px',
                 cursor: 'pointer',
                 fontSize: '0.9rem',
-                fontWeight: '600',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 4px 15px rgba(255, 215, 0, 0.3)'
+                fontWeight: '700',
+                letterSpacing: '0.3px',
+                transition: 'all 0.15s ease',
+                boxShadow: '0 10px 24px rgba(212, 175, 55, 0.35)'
               }}
               onMouseOver={(e) => {
                 e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 6px 20px rgba(255, 215, 0, 0.4)';
+                e.target.style.filter = 'brightness(1.05)';
+                e.target.style.boxShadow = '0 14px 30px rgba(212, 175, 55, 0.45)';
               }}
               onMouseOut={(e) => {
                 e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = '0 4px 15px rgba(255, 215, 0, 0.3)';
+                e.target.style.filter = 'brightness(1)';
+                e.target.style.boxShadow = '0 10px 24px rgba(212, 175, 55, 0.35)';
               }}
             >
               Close
