@@ -477,26 +477,43 @@ export default function Page(){
               </button>
             </div>
             <div style={{ color: '#fff', lineHeight: '1.6' }}>
-              <p><strong>Cookies Policy – Paradais Voyage Luxury Travel Concierge</strong></p>
-              <p><em>Last updated: 01/01/2026</em></p>
-              
-              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>1. What Are Cookies</h3>
-              <p>Cookies are small text files stored on your device when you visit our website.</p>
-              
-              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>2. How We Use Cookies</h3>
+              <p style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.25rem' }}>COOKIES POLICY – Paradais Voyage Luxury Travel Concierge</p>
+              <p style={{ fontStyle: 'italic', opacity: 0.85 }}>Last updated: 01/11/2025</p>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginTop: 0, marginBottom: '0.75rem', fontSize: '1.1rem' }}>1. What Are Cookies</h3>
+              <p>Cookies are small text files stored on your device to improve your browsing experience.</p>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>2. How We Use Cookies</h3>
               <p>We use cookies to:</p>
-              <ul>
-                <li>Improve website functionality and user experience</li>
-                <li>Analyse website traffic through tools such as <strong>Google Analytics</strong></li>
-                <li>Remember your preferences (e.g. form details)</li>
+              <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
+                <li>Enhance website functionality</li>
+                <li>Analyse traffic with Google Analytics</li>
+                <li>Remember your form preferences</li>
               </ul>
-              
-              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>3. Managing Cookies</h3>
-              <p>You can manage or disable cookies in your browser settings.</p>
-              <p>Please note that disabling cookies may affect the functionality of our website.</p>
-              
-              <h3 style={{ color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>4. Contact</h3>
-              <p>If you have any questions about our Cookies Policy, please contact us at: <a href="mailto:info@paradaisvoyage.com" style={{ color: '#ffd700' }}>info@paradaisvoyage.com</a></p>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>3. Third-Party Cookies</h3>
+              <p>We use cookies from:</p>
+              <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
+                <li><strong>Stripe</strong> (for secure payments)</li>
+                <li><strong>Google Analytics</strong> (to improve user experience)</li>
+              </ul>
+              <p>Learn more at: <a href="https://stripe.com/cookies-policy/legal" style={{ color: '#ffd700' }} target="_blank" rel="noopener noreferrer">Stripe Cookies Policy</a></p>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>4. Managing Cookies</h3>
+              <p>You can disable cookies in your browser settings. However, doing so may impact website functionality.</p>
+
+              <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
+
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>5. Contact</h3>
+              <p>If you have questions about our Cookies Policy, contact us at: <a href="mailto:info@paradaisvoyage.com" style={{ color: '#ffd700' }}>info@paradaisvoyage.com</a></p>
             </div>
           </div>
         </div>
