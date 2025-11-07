@@ -339,46 +339,47 @@ export default function Page(){
               </button>
             </div>
             <div style={{ color: '#fff', lineHeight: '1.6' }}>
-              <p style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.25rem' }}>Terms & Conditions – Paradais Voyage Luxury Travel Concierge</p>
-              <p style={{ fontStyle: 'italic', opacity: 0.85 }}>Last updated: 01/01/2026</p>
+              <p style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.25rem' }}>TERMS &amp; CONDITIONS – Paradais Voyage Luxury Travel Concierge</p>
+              <p style={{ fontStyle: 'italic', opacity: 0.85 }}>Last updated: 01/11/2025</p>
+              <p style={{ marginBottom: '0.5rem' }}>Registered Business: <strong>Paradais Voyage Luxury Travel Concierge</strong></p>
+              <p style={{ marginBottom: '0.5rem' }}>Registered Office: <strong>United Kingdom</strong></p>
+              <p style={{ marginBottom: '0.5rem' }}>Email: <a href="mailto:info@paradaisvoyage.com" style={{ color: '#ffd700' }}>info@paradaisvoyage.com</a></p>
+              <p style={{ marginBottom: '1.5rem' }}>Website: <a href="https://www.paradaisvoyage.com" style={{ color: '#ffd700' }} target="_blank" rel="noopener noreferrer">www.paradaisvoyage.com</a></p>
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
               <h3 style={{ color: '#fff', marginTop: 0, marginBottom: '0.75rem', fontSize: '1.1rem' }}>1. Introduction</h3>
               <p>Welcome to Paradais Voyage Luxury Travel Concierge ("we", "our", "us").</p>
-              <p>
-                By accessing and using our website{' '}
-                <a href="https://www.paradaisvoyage.com" style={{ color: '#ffd700' }}>www.paradaisvoyage.com</a>{' '}
-                and requesting our services, you agree to these Terms &amp; Conditions.
-              </p>
-              <p>If you do not agree with these terms, please do not use our services.</p>
+              <p>By accessing and using our website and services, you agree to these Terms &amp; Conditions.</p>
+              <p>If you do not agree, please discontinue use of our services.</p>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
               <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>2. Our Services</h3>
-              <p>We provide concierge and intermediary services for luxury travel focused exclusively on:</p>
+              <p>We provide luxury travel concierge and intermediary services, including:</p>
               <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
                 <li>Luxury hotel reservations</li>
-                <li>Private transfers and flights (limousines, private cars, seaplanes, jets)</li>
+                <li>Private transfers and flights (limousines, private cars, seaplanes, private jets)</li>
               </ul>
-              <p>We do not operate hotels, airlines, yachts or transport services directly.</p>
-              <p>We do not provide excursions, activities or guided tours.</p>
+              <p>We do <strong>not</strong> operate hotels, airlines, yachts, or transport companies directly.</p>
+              <p>We do <strong>not</strong> organise excursions, entertainment, or guided tours.</p>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
-              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>3. Payments</h3>
-              <p>All payments are securely processed via <strong>Stripe Connect</strong>, a third-party payment platform regulated by the <strong>Financial Conduct Authority (FCA)</strong> in the United Kingdom.</p>
-              <p>When you make a payment through our website or via a payment link, the total amount is automatically distributed between Paradais Voyage and the relevant suppliers according to our agreements.</p>
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>3. Payments via Stripe Connect</h3>
+              <p>All payments are processed securely through <strong>Stripe Connect</strong>, regulated by the <strong>Financial Conduct Authority (FCA)</strong> in the United Kingdom.</p>
+              <p>When you make a payment, Stripe automatically distributes the total between:</p>
               <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
-                <li>Paradais Voyage may charge a <strong>service fee (markup)</strong> or earn a <strong>commission from suppliers</strong>; this will always be clearly disclosed before confirming the booking.</li>
-                <li>We do not store or have direct access to your card details.</li>
-                <li>All transactions are handled by <strong>Stripe Payments UK Ltd</strong> in accordance with UK data protection laws.</li>
+                <li>Paradais Voyage (our service fee and commission)</li>
+                <li>Third-party suppliers (hotels, transport providers, airlines, etc.)</li>
               </ul>
+              <p>We do not store or access full card details. All financial transactions are handled by <strong>Stripe Payments UK Ltd</strong>.</p>
+              <p>Paradais Voyage may charge a <strong>service fee (12%)</strong> and/or earn a <strong>supplier commission (15%)</strong>, both disclosed before confirmation.</p>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
               <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>4. Cancellations &amp; Refunds</h3>
               <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
-                <li>All cancellations and refunds are subject to each supplier’s individual policy (e.g. hotel or airline).</li>
+                <li>All cancellations and refunds follow each supplier’s individual policy.</li>
                 <li>Our service fees and commissions are <strong>non-refundable</strong> once a booking is confirmed, unless otherwise agreed in writing.</li>
               </ul>
 
@@ -386,33 +387,30 @@ export default function Page(){
 
               <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>5. Limitation of Liability</h3>
               <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
-                <li>Paradais Voyage acts solely as an <strong>intermediary</strong> between the client and third-party suppliers.</li>
-                <li>We are not liable for service failures, delays, cancellations, accidents, or damages caused by third-party providers.</li>
-                <li>Our maximum liability is limited to the direct service fee paid to us.</li>
+                <li>Paradais Voyage acts solely as an intermediary.</li>
+                <li>We are not responsible for delays, cancellations, or damages caused by suppliers.</li>
+                <li>Our total liability is limited to the direct service fee paid to us.</li>
               </ul>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
-              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>6. Privacy &amp; Data</h3>
-              <p>
-                We collect and process personal data in accordance with our{' '}
-                <a href="#privacy" style={{ color: '#ffd700' }}>Privacy Policy</a>.
-              </p>
-              <p>Stripe may also process payment data on our behalf. For details, please refer to{' '}
-                <a href="https://stripe.com/gb/privacy" style={{ color: '#ffd700' }} target="_blank" rel="noopener noreferrer">Stripe’s Privacy Policy</a>.
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>6. Privacy &amp; Data Protection</h3>
+              <p>We collect and process personal data in line with our <a href="#privacy" style={{ color: '#ffd700' }}>Privacy Policy</a>.</p>
+              <p>Stripe may also process data related to payments. See{' '}
+                <a href="https://stripe.com/gb/privacy" style={{ color: '#ffd700' }} target="_blank" rel="noopener noreferrer">Stripe’s Privacy Policy</a> for more details.
               </p>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
-              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>7. Governing Law</h3>
-              <p>These Terms shall be governed by and construed in accordance with the laws of <strong>England and Wales</strong>.</p>
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>7. Dispute Resolution</h3>
+              <p>Any disputes will first be addressed through written communication.</p>
+              <p>If unresolved, disputes fall under the exclusive jurisdiction of the courts of <strong>England and Wales</strong>.</p>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
-              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>8. Secure Payments Notice (required by Stripe)</h3>
-              <p>All payments made via Paradais Voyage are processed by Stripe Connect.</p>
-              <p>Stripe is responsible for the secure collection and transfer of funds between clients, Paradais Voyage, and suppliers.</p>
-              <p>By proceeding with a payment, you agree to these Terms and acknowledge that Stripe may distribute your payment accordingly.</p>
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>8. Secure Payments Statement</h3>
+              <p>All payments are handled by Stripe Connect.</p>
+              <p>By completing a transaction, you agree that Stripe may distribute payments between Paradais Voyage and its suppliers as part of the booking process.</p>
             </div>
           </div>
         </div>
