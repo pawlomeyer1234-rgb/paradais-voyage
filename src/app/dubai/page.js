@@ -37,7 +37,7 @@ export default function DubaiPage() {
               Discover The Ultimate Luxury Escape in Dubai - where modern architecture meets traditional hospitality and world-class experiences await your arrival.
             </p>
             <div className="cta-row" style={{ justifyContent: 'center', gap: '20px' }}>
-              <Link className="btn-gold" href="/#form">Plan Your Dubai Escape</Link>
+              <Link className="btn-gold" href="/#form">Start Your Journey</Link>
               <Link className="btn-glass" href="/">Back to Home</Link>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function DubaiPage() {
       <section className="pv-section pv-form">
         <div className="pv-container">
           <form className="form-glass" onSubmit={(e) => e.preventDefault()}>
-            <h3>Plan Your Dubai Escape</h3>
+            <h3>Plan Your Journey</h3>
             <div className="grid">
               <input className="input-glass" placeholder="Full name" required />
               <input className="input-glass" placeholder="Email" type="email" required />
