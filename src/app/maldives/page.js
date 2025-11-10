@@ -37,7 +37,7 @@ export default function MaldivesPage() {
               Discover The Ultimate Luxury Escape in Maldives - where pristine white sands meet crystal-clear waters and world-class resorts welcome you with unforgettable service.
             </p>
             <div className="cta-row" style={{ justifyContent: 'center', gap: '20px' }}>
-              <Link className="btn-gold" href="/#form">Plan Your Maldives Escape</Link>
+              <Link className="btn-gold" href="/#form">Start Your Journey</Link>
               <Link className="btn-glass" href="/">Back to Home</Link>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function MaldivesPage() {
       <section className="pv-section pv-form">
         <div className="pv-container">
           <form className="form-glass" onSubmit={(e) => e.preventDefault()}>
-            <h3>Plan Your Maldives Escape</h3>
+            <h3>Plan Your Journey</h3>
             <div className="grid">
               <input className="input-glass" placeholder="Full name" required />
               <input className="input-glass" placeholder="Email" type="email" required />
