@@ -50,17 +50,6 @@ export default function DubaiPage() {
             <article className="feature-card glass-card">
               <div className="experience-images" style={{ height: '200px', marginBottom: '20px' }}>
                 <div className="experience-image" style={{ 
-                  backgroundImage: 'url("/images/hero/Voilla.jpg")',
-                  borderRadius: '12px'
-                }}></div>
-              </div>
-              <h3>Luxury Hotels & Resorts</h3>
-              <p>Handpicked luxury accommodations offering breathtaking city views, world-class amenities, and unparalleled service in the heart of Dubai.</p>
-            </article>
-
-            <article className="feature-card glass-card">
-              <div className="experience-images" style={{ height: '200px', marginBottom: '20px' }}>
-                <div className="experience-image" style={{ 
                   backgroundImage: 'url("/images/hero/car 2.jpg")',
                   borderRadius: '12px',
                   width: '48%'
