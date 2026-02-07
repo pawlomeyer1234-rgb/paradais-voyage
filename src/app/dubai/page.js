@@ -16,11 +16,11 @@ export default function DubaiPage() {
             </Link>
           </div>
           <nav className="nav-items">
-            <Link href="/#experiences">Experiences</Link>
-            <Link href="/#destinations">Destinations</Link>
+            <Link href="/#experiences">Private Jets</Link>
+            <Link href="/#form">How It Works</Link>
             <Link href="/#about">About</Link>
             <Link className="btn-glass btn-sm" href="/#form">
-              Plan Your Sojourn
+              Get a Jet Quote
             </Link>
           </nav>
         </div>
