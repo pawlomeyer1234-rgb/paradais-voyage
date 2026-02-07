@@ -82,6 +82,7 @@ export default function GetAJetQuotePage() {
               <h3>{headline}</h3>
               <div className="grid">
                 <input
+                  key={destinationValue || "destination"}
                   className="input-glass"
                   name="destination"
                   placeholder="Destination (e.g. Dubai DXB, Maldives MLE)"
