@@ -75,7 +75,6 @@ export default function Page(){
         <div className="pv-container cards" style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
           <article className="feature-card glass-card" style={{ width: '400px', flex: '0 0 auto' }}>
             <div className="experience-images">
-              <div className="experience-image" style={{ backgroundImage: "url('/images/hero/Car 1.webp')" }} />
               <div className="experience-image" style={{ backgroundImage: "url('/images/hero/jet.webp')" }} />
             </div>
             <h3>Private Jet Charter</h3>
