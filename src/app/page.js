@@ -57,11 +57,13 @@ export default function Page(){
               <a className="btn-gold" href="#form">Get a Jet Quote</a>
               <a className="btn-glass" href="#how-it-works">How It Works</a>
             </div>
-            <ul className="trust-badges">
-              <li className="badge-glass">On-Demand Charter</li>
-              <li className="badge-glass">24/7 Aviation Concierge</li>
-              <li className="badge-glass">Discreet, Vetted Operators</li>
-            </ul>
+            <p className="trust-badges" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.5rem', margin: 0 }}>
+              <span className="badge-glass">On-Demand Charter</span>
+              <span aria-hidden="true">·</span>
+              <span className="badge-glass">24/7 Aviation Concierge</span>
+              <span aria-hidden="true">·</span>
+              <span className="badge-glass">Discreet, Vetted Operators</span>
+            </p>
           </div>
           <div className="hero-visual">
             <div className="hero-media glass-panel" />
