@@ -85,6 +85,30 @@ export default function Page(){
         </div>
       </section>
 
+      <section id="aircraft-categories" className="pv-section">
+        <div className="pv-container">
+          <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '2rem' }}>Aircraft Categories</h2>
+          <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', maxWidth: '1100px', margin: '0 auto' }}>
+            <Link href="/get-a-jet-quote" className="glass-card" style={{ padding: '1.5rem', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Light Jets →</h3>
+              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>Ideal for short-haul flights across Europe, offering speed, flexibility, and access to smaller airports.</p>
+            </Link>
+            <Link href="/get-a-jet-quote" className="glass-card" style={{ padding: '1.5rem', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Midsize Jets →</h3>
+              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>A balance of comfort and range for longer European routes and multi-city travel.</p>
+            </Link>
+            <Link href="/get-a-jet-quote" className="glass-card" style={{ padding: '1.5rem', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Heavy Jets →</h3>
+              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>Spacious cabins and intercontinental capability for long-range private travel.</p>
+            </Link>
+            <Link href="/get-a-jet-quote" className="glass-card" style={{ padding: '1.5rem', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Ultra Long Range →</h3>
+              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>Non-stop intercontinental flights with maximum comfort and performance.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section id="how-it-works" className="pv-section">
         <div className="pv-container">
           <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '2rem' }}>How It Works</h2>
