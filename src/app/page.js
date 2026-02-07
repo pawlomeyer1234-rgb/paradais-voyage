@@ -92,23 +92,26 @@ export default function Page(){
             <article className="glass-card" style={{ padding: '1.5rem' }}>
               <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>1</span>
               <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Share Your Route & Timing</h3>
-              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>Tell us where you're flying, when, and how many passengers.</p>
+              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>Tell us where you're flying, your preferred dates, and passenger details.</p>
             </article>
             <article className="glass-card" style={{ padding: '1.5rem' }}>
               <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>2</span>
               <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Aircraft Sourcing</h3>
-              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>We source suitable aircraft options through our vetted aviation partners.</p>
+              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>We source suitable aircraft options through our vetted private aviation partners.</p>
             </article>
             <article className="glass-card" style={{ padding: '1.5rem' }}>
               <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>3</span>
               <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Operator Booking & Flight Delivery</h3>
-              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>The selected operator handles contracts, payments, and flight operations.</p>
+              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>The selected operator handles contracts, payments, and all flight operations.</p>
             </article>
             <article className="glass-card" style={{ padding: '1.5rem' }}>
               <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>4</span>
               <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>One Point of Contact</h3>
               <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>We remain your single point of contact from quote to wheels-down.</p>
             </article>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <a className="btn-gold" href="#form">Get a Jet Quote</a>
           </div>
         </div>
       </section>
