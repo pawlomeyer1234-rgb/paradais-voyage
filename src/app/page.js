@@ -73,23 +73,16 @@ export default function Page(){
 
       <section id="experiences" className="pv-section">
         <div className="pv-container cards" style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
-          {[
-            { title: "Private Transport & Flights", copy: "Personal drivers, luxury vehicles, zero compromises.", images: ["/images/hero/Car 1.webp", "/images/hero/jet.webp"] }
-          ].map((c, i) => (
-            <article key={i} className="feature-card glass-card" style={{ width: '400px', flex: '0 0 auto' }}>
-              {c.images && (
-                <div className="experience-images">
-                  {c.images.map((img, imgIndex) => (
-                    <div key={imgIndex} className="experience-image" style={{ backgroundImage: `url('${img}')` }}>
-                    </div>
-                  ))}
-                </div>
-              )}
-              <h3>{c.title}</h3>
-              <p>{c.copy}</p>
-              <button className="btn-link">Explore Perfection →</button>
-            </article>
-          ))}
+          <article className="feature-card glass-card" style={{ width: '400px', flex: '0 0 auto' }}>
+            <div className="experience-images">
+              <div className="experience-image" style={{ backgroundImage: "url('/images/hero/Car 1.webp')" }} />
+              <div className="experience-image" style={{ backgroundImage: "url('/images/hero/jet.webp')" }} />
+            </div>
+            <h3>Private Jet Charter</h3>
+            <p>Worldwide on-demand private jet charter through vetted aviation partners.</p>
+            <p>From short-haul business flights to intercontinental journeys, we source the right aircraft for your route, timing and preferences.</p>
+            <a className="btn-link" href="#form">Get a Jet Quote →</a>
+          </article>
         </div>
       </section>
 
