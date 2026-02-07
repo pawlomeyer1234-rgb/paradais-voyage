@@ -117,19 +117,18 @@ export default function Page(){
       </section>
 
       <section id="destinations" className="pv-section pv-strip">
-        <div className="pv-container strip-row">
-          {[
-            { name: "Maldives", image: "/images/hero/Maledives.jpg", link: "/maldives", clickable: true },
-            { name: "Dubai", image: "/images/hero/Dubai.jpg", link: "/dubai", clickable: true }
-          ].map((d, i) => (
-            <Link key={i} href={d.link} className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="destination-image" style={{ backgroundImage: `url(${d.image})` }}></div>
-              <span className="destination-name">
-                {d.name}
-                {d.clickable && <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span>}
-              </span>
+        <div className="pv-container">
+          <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Popular Private Jet Routes</h2>
+          <div className="strip-row">
+            <Link href="/get-a-jet-quote?destination=Dubai" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/hero/Dubai.jpg)' }}></div>
+              <span className="destination-name">Dubai <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span></span>
             </Link>
-          ))}
+            <Link href="/get-a-jet-quote?destination=Maldives" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/hero/Maledives.jpg)' }}></div>
+              <span className="destination-name">Maldives <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span></span>
+            </Link>
+          </div>
         </div>
       </section>
 
