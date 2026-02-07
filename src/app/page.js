@@ -52,7 +52,7 @@ export default function Page(){
         <div className="pv-container hero-grid">
           <div className="hero-copy glass-card">
             <h1>We Arrange Private Jet Charter Worldwide.</h1>
-            <p>At Paradais Voyage we curate only two essentials of exceptional travel: exceptional stays and seamless private transport. From five-star suites and overwater villas to private jets and chauffeured limousines - we handle accommodation and transport with surgical precision. Please note: we do not provide excursions or activity bookings; our promise is perfect arrival, perfect stay, every time.</p>
+            <p>We introduce private clients to vetted private aviation partners worldwide — sourcing the right aircraft for your route, schedule and preferences. Flights are operated by licensed third-party operators; we remain your single point of contact from quote to wheels-down.</p>
             <div className="cta-row">
               <a className="btn-gold" href="#form">Start Your Journey</a>
               <a className="btn-glass" href="#experiences">Explore Private Jets</a>
