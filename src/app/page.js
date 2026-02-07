@@ -58,9 +58,9 @@ export default function Page(){
               <a className="btn-glass" href="#form">How It Works</a>
             </div>
             <ul className="trust-badges">
-              <li className="badge-glass">Bespoke Itineraries</li>
-              <li className="badge-glass">24/7 Concierge</li>
-              <li className="badge-glass">Discreet VIP Access</li>
+              <li className="badge-glass">On-Demand Charter</li>
+              <li className="badge-glass">24/7 Aviation Concierge</li>
+              <li className="badge-glass">Discreet, Vetted Operators</li>
             </ul>
           </div>
           <div className="hero-visual">
