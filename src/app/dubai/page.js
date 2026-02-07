@@ -37,7 +37,7 @@ export default function DubaiPage() {
               Discover The Ultimate Luxury Escape in Dubai - where modern architecture meets traditional hospitality and world-class experiences await your arrival.
             </p>
             <div className="cta-row" style={{ justifyContent: 'center', gap: '20px' }}>
-              <Link className="btn-gold" href="/#form">Start Your Journey</Link>
+              <Link className="btn-gold" href="/#form">Get a Jet Quote</Link>
               <Link className="btn-glass" href="/">Back to Home</Link>
             </div>
           </div>

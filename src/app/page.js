@@ -54,8 +54,8 @@ export default function Page(){
             <h1>We Arrange Private Jet Charter Worldwide.</h1>
             <p>We introduce private clients to vetted private aviation partners worldwide — sourcing the right aircraft for your route, schedule and preferences. Flights are operated by licensed third-party operators; we remain your single point of contact from quote to wheels-down.</p>
             <div className="cta-row">
-              <a className="btn-gold" href="#form">Start Your Journey</a>
-              <a className="btn-glass" href="#experiences">Explore Private Jets</a>
+              <a className="btn-gold" href="#form">Get a Jet Quote</a>
+              <a className="btn-glass" href="#form">How It Works</a>
             </div>
             <ul className="trust-badges">
               <li className="badge-glass">Bespoke Itineraries</li>
