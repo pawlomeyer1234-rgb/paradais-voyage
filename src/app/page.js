@@ -39,7 +39,7 @@ export default function Page(){
           </div>
           <nav className="nav-items">
             <a href="#experiences">Private Jets</a>
-            <a href="#form">How It Works</a>
+            <a href="#how-it-works">How It Works</a>
             <a href="#about">About</a>
             <a className="btn-glass btn-sm" href="#form">
               Get a Jet Quote
@@ -55,7 +55,7 @@ export default function Page(){
             <p>We introduce private clients to vetted private aviation partners worldwide — sourcing the right aircraft for your route, schedule and preferences. Flights are operated by licensed third-party operators; we remain your single point of contact from quote to wheels-down.</p>
             <div className="cta-row">
               <a className="btn-gold" href="#form">Get a Jet Quote</a>
-              <a className="btn-glass" href="#form">How It Works</a>
+              <a className="btn-glass" href="#how-it-works">How It Works</a>
             </div>
             <ul className="trust-badges">
               <li className="badge-glass">On-Demand Charter</li>
@@ -88,6 +88,34 @@ export default function Page(){
               <button className="btn-link">Explore Perfection →</button>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="how-it-works" className="pv-section">
+        <div className="pv-container">
+          <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '2rem' }}>How It Works</h2>
+          <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', maxWidth: '1000px', margin: '0 auto' }}>
+            <article className="glass-card" style={{ padding: '1.5rem' }}>
+              <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>1</span>
+              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Share Your Route & Timing</h3>
+              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>Tell us where you're flying, when, and how many passengers.</p>
+            </article>
+            <article className="glass-card" style={{ padding: '1.5rem' }}>
+              <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>2</span>
+              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Aircraft Sourcing</h3>
+              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>We source suitable aircraft options through our vetted aviation partners.</p>
+            </article>
+            <article className="glass-card" style={{ padding: '1.5rem' }}>
+              <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>3</span>
+              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Operator Booking & Flight Delivery</h3>
+              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>The selected operator handles contracts, payments, and flight operations.</p>
+            </article>
+            <article className="glass-card" style={{ padding: '1.5rem' }}>
+              <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>4</span>
+              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>One Point of Contact</h3>
+              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>We remain your single point of contact from quote to wheels-down.</p>
+            </article>
+          </div>
         </div>
       </section>
 

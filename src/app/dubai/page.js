@@ -17,7 +17,7 @@ export default function DubaiPage() {
           </div>
           <nav className="nav-items">
             <Link href="/#experiences">Private Jets</Link>
-            <Link href="/#form">How It Works</Link>
+            <Link href="/#how-it-works">How It Works</Link>
             <Link href="/#about">About</Link>
             <Link className="btn-glass btn-sm" href="/#form">
               Get a Jet Quote
