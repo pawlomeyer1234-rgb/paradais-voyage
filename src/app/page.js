@@ -89,22 +89,20 @@ export default function Page(){
         <div className="pv-container">
           <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '2rem' }}>Aircraft Categories</h2>
           <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', maxWidth: '1100px', margin: '0 auto' }}>
-            <Link href="/get-a-jet-quote" className="glass-card" style={{ padding: '1.5rem', textDecoration: 'none', color: 'inherit', display: 'block' }}>
-              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Light Jets →</h3>
-              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>Ideal for short-haul flights across Europe, offering speed, flexibility, and access to smaller airports.</p>
-            </Link>
-            <Link href="/get-a-jet-quote" className="glass-card" style={{ padding: '1.5rem', textDecoration: 'none', color: 'inherit', display: 'block' }}>
-              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Midsize Jets →</h3>
-              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>A balance of comfort and range for longer European routes and multi-city travel.</p>
-            </Link>
-            <Link href="/get-a-jet-quote" className="glass-card" style={{ padding: '1.5rem', textDecoration: 'none', color: 'inherit', display: 'block' }}>
-              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Heavy Jets →</h3>
-              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>Spacious cabins and intercontinental capability for long-range private travel.</p>
-            </Link>
-            <Link href="/get-a-jet-quote" className="glass-card" style={{ padding: '1.5rem', textDecoration: 'none', color: 'inherit', display: 'block' }}>
-              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Ultra Long Range →</h3>
-              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>Non-stop intercontinental flights with maximum comfort and performance.</p>
-            </Link>
+            {[
+              { title: 'Light Jets →', desc: 'Ideal for short-haul flights across Europe, offering speed, flexibility, and access to smaller airports.' },
+              { title: 'Midsize Jets →', desc: 'A balance of comfort and range for longer European routes and multi-city travel.' },
+              { title: 'Heavy Jets →', desc: 'Spacious cabins and intercontinental capability for long-range private travel.' },
+              { title: 'Ultra Long Range →', desc: 'Non-stop intercontinental flights with maximum comfort and performance.' }
+            ].map((c, i) => (
+              <Link key={i} href="/get-a-jet-quote" className="glass-card" style={{ padding: 0, overflow: 'hidden', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                <img src="/images/hero/samoloty.png" alt="" style={{ width: '100%', height: '200px', objectFit: 'cover', display: 'block', borderRadius: '18px 18px 0 0' }} />
+                <div style={{ padding: '1.5rem' }}>
+                  <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>{c.title}</h3>
+                  <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>{c.desc}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
