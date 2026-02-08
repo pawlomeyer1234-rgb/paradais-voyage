@@ -90,14 +90,14 @@ export default function Page(){
           <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '2rem' }}>Aircraft Categories</h2>
           <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', maxWidth: '1100px', margin: '0 auto' }}>
             {[
-              { title: 'Light Jets →', desc: 'Ideal for short-haul flights across Europe, offering speed, flexibility, and access to smaller airports.' },
-              { title: 'Midsize Jets →', desc: 'A balance of comfort and range for longer European routes and multi-city travel.' },
-              { title: 'Heavy Jets →', desc: 'Spacious cabins and intercontinental capability for long-range private travel.' },
-              { title: 'Ultra Long Range →', desc: 'Non-stop intercontinental flights with maximum comfort and performance.' }
+              { title: 'Light Jets →', desc: 'Ideal for short-haul flights across Europe, offering speed, flexibility, and access to smaller airports.', image: '/images/hero/Light Jets.png' },
+              { title: 'Midsize Jets →', desc: 'A balance of comfort and range for longer European routes and multi-city travel.', image: '/images/hero/Midsize Jets.png' },
+              { title: 'Heavy Jets →', desc: 'Spacious cabins and intercontinental capability for long-range private travel.', image: '/images/hero/Heavy Jets.png' },
+              { title: 'Ultra Long Range →', desc: 'Non-stop intercontinental flights with maximum comfort and performance.', image: '/images/hero/Ultra Long Range.png' }
             ].map((cat, i) => (
               <Link key={i} href="/get-a-jet-quote" className="glass-card" style={{ padding: 0, overflow: 'hidden', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <img
-                  src="/images/hero/samoloty.png"
+                  src={cat.image}
                   alt=""
                   style={{
                     width: '100%',
