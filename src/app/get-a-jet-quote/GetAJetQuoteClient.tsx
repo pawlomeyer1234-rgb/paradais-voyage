@@ -1,12 +1,11 @@
 "use client";
 
-import { Suspense, useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-function GetAJetQuoteContent() {
-  const searchParams = useSearchParams();
-  const destination = (searchParams.get("destination") ?? "").trim();
+export default function GetAJetQuoteClient() {
+  const destination = (useSearchParams().get("destination") ?? "").trim();
   const isDubai = /dubai/i.test(destination);
   const isMaldives = /maldives/i.test(destination);
 
@@ -66,7 +65,7 @@ function GetAJetQuoteContent() {
               method="POST"
               onSubmit={async (e) => {
                 e.preventDefault();
-                const form = e.target;
+                const form = e.target as HTMLFormElement;
                 const formData = new FormData(form);
                 const response = await fetch(form.action, { method: "POST", body: formData });
                 const data = await response.json();
@@ -184,21 +183,5 @@ function GetAJetQuoteContent() {
         </div>
       )}
     </main>
-  );
-}
-
-function GetAJetQuoteFallback() {
-  return (
-    <main className="pv-root" style={{ minHeight: "60vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <div className="pv-container" style={{ textAlign: "center", opacity: 0.8 }}>Loading…</div>
-    </main>
-  );
-}
-
-export default function GetAJetQuotePage() {
-  return (
-    <Suspense fallback={<GetAJetQuoteFallback />}>
-      <GetAJetQuoteContent />
-    </Suspense>
   );
 }
