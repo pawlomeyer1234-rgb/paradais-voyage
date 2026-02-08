@@ -5,21 +5,29 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
 export default function GetAJetQuoteClient() {
-  const destination = (useSearchParams().get("destination") ?? "").trim();
+  const searchParams = useSearchParams();
+  const corridor = (searchParams.get("corridor") ?? "").trim();
+  const destination = (searchParams.get("destination") ?? "").trim();
+
   const isDubai = /dubai/i.test(destination);
   const isMaldives = /maldives/i.test(destination);
 
   const headline = useMemo(() => {
-    if (isDubai) return "Private Jet Charter to Dubai";
-    if (isMaldives) return "Private Jet Charter to Maldives";
+    if (corridor) return `Private Jet Charter: ${corridor}`;
+    if (destination) return `Private Jet Charter to ${destination}`;
     return "Get a Jet Quote";
-  }, [isDubai, isMaldives]);
+  }, [corridor, destination]);
 
   const destinationValue = useMemo(() => {
     if (isDubai) return "Dubai (DXB / DWC)";
     if (isMaldives) return "Maldives (MLE)";
     return "";
   }, [isDubai, isMaldives]);
+
+  const messageDefaultValue = useMemo(() => {
+    if (corridor) return `Corridor: ${corridor}\n\n`;
+    return "";
+  }, [corridor]);
 
   const [privacyOpen, setPrivacyOpen] = useState(false);
   const [termsOpen, setTermsOpen] = useState(false);
@@ -65,7 +73,7 @@ export default function GetAJetQuoteClient() {
               method="POST"
               onSubmit={async (e) => {
                 e.preventDefault();
-                const form = e.target as HTMLFormElement;
+                const form = e.target;
                 const formData = new FormData(form);
                 const response = await fetch(form.action, { method: "POST", body: formData });
                 const data = await response.json();
@@ -92,7 +100,15 @@ export default function GetAJetQuoteClient() {
                 <input className="input-glass" name="phone" placeholder="Phone (optional)" />
                 <input className="input-glass" name="preferred_dates" placeholder="Preferred dates" />
               </div>
-              <textarea className="input-glass" name="message" rows={5} placeholder="Route, dates, passengers, and any preferences..." required />
+              <textarea
+                key={messageDefaultValue ? "with-corridor" : "no-corridor"}
+                className="input-glass"
+                name="message"
+                rows={5}
+                placeholder="Route, dates, passengers, and any preferences..."
+                defaultValue={messageDefaultValue}
+                required
+              />
               <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", marginTop: "1rem" }}>
                 <input
                   type="checkbox"

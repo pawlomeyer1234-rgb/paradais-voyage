@@ -144,13 +144,17 @@ export default function Page(){
         <div className="pv-container">
           <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Popular Private Jet Routes</h2>
           <div className="strip-row">
-            <Link href="/get-a-jet-quote?destination=Dubai" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="destination-image" style={{ backgroundImage: 'url(/images/hero/Dubai.jpg)' }}></div>
-              <span className="destination-name">Dubai <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span></span>
+            <Link href="/get-a-jet-quote?corridor=Intra-Europe" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/hero/jet.webp)' }}></div>
+              <span className="destination-name">Intra-Europe <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span></span>
             </Link>
-            <Link href="/get-a-jet-quote?destination=Maldives" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="destination-image" style={{ backgroundImage: 'url(/images/hero/Maledives.jpg)' }}></div>
-              <span className="destination-name">Maldives <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span></span>
+            <Link href="/get-a-jet-quote?corridor=EU-US" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/hero/jet.webp)' }}></div>
+              <span className="destination-name">Europe ↔ US <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span></span>
+            </Link>
+            <Link href="/get-a-jet-quote?corridor=EU-ME" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="destination-image" style={{ backgroundImage: 'url(/images/hero/jet.webp)' }}></div>
+              <span className="destination-name">Europe ↔ Middle East <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span></span>
             </Link>
           </div>
         </div>
