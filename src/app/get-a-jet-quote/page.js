@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { Suspense, useState, useMemo } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-export default function GetAJetQuotePage() {
+function GetAJetQuoteContent() {
   const searchParams = useSearchParams();
-  const destinationParam = (searchParams?.get("destination") || "").trim();
-  const isDubai = /dubai/i.test(destinationParam);
-  const isMaldives = /maldives/i.test(destinationParam);
+  const destination = (searchParams.get("destination") ?? "").trim();
+  const isDubai = /dubai/i.test(destination);
+  const isMaldives = /maldives/i.test(destination);
 
   const headline = useMemo(() => {
     if (isDubai) return "Private Jet Charter to Dubai";
@@ -184,5 +184,21 @@ export default function GetAJetQuotePage() {
         </div>
       )}
     </main>
+  );
+}
+
+function GetAJetQuoteFallback() {
+  return (
+    <main className="pv-root" style={{ minHeight: "60vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div className="pv-container" style={{ textAlign: "center", opacity: 0.8 }}>Loading…</div>
+    </main>
+  );
+}
+
+export default function GetAJetQuotePage() {
+  return (
+    <Suspense fallback={<GetAJetQuoteFallback />}>
+      <GetAJetQuoteContent />
+    </Suspense>
   );
 }
