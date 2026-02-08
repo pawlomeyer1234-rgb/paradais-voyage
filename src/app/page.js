@@ -94,12 +94,23 @@ export default function Page(){
               { title: 'Midsize Jets →', desc: 'A balance of comfort and range for longer European routes and multi-city travel.' },
               { title: 'Heavy Jets →', desc: 'Spacious cabins and intercontinental capability for long-range private travel.' },
               { title: 'Ultra Long Range →', desc: 'Non-stop intercontinental flights with maximum comfort and performance.' }
-            ].map((c, i) => (
+            ].map((cat, i) => (
               <Link key={i} href="/get-a-jet-quote" className="glass-card" style={{ padding: 0, overflow: 'hidden', textDecoration: 'none', color: 'inherit', display: 'block' }}>
-                <img src="/images/hero/samoloty.png" alt="" style={{ width: '100%', height: '200px', objectFit: 'cover', display: 'block', borderRadius: '18px 18px 0 0' }} />
+                <img
+                  src="/images/hero/samoloty.png"
+                  alt=""
+                  style={{
+                    width: '100%',
+                    height: 'clamp(180px, 20vw, 220px)',
+                    objectFit: 'cover',
+                    display: 'block',
+                    borderTopLeftRadius: '18px',
+                    borderTopRightRadius: '18px'
+                  }}
+                />
                 <div style={{ padding: '1.5rem' }}>
-                  <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>{c.title}</h3>
-                  <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>{c.desc}</p>
+                  <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>{cat.title}</h3>
+                  <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>{cat.desc}</p>
                 </div>
               </Link>
             ))}
