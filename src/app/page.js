@@ -59,7 +59,9 @@ export default function Page(){
             </div>
           </div>
           <div className="hero-visual">
-            <div className="hero-media glass-panel" />
+            <div className="pv-media-frame glass-panel">
+              <img src="/hero/jet-gory.jpg" alt="Private jet" />
+            </div>
           </div>
         </div>
       </section>
@@ -150,7 +152,7 @@ export default function Page(){
             <a className="btn-gold" href="/get-a-jet-quote">Speak With a Concierge</a>
           </div>
           <div className="about-side">
-            <div className="about-image-container glass-panel">
+            <div className="pv-media-frame glass-panel">
               <img src="/images/hero/cabin.jpg" alt="Private jet cabin" />
             </div>
           </div>
