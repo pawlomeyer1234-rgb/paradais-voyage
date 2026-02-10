@@ -179,10 +179,10 @@ export default function Page(){
       <section id="about" className="pv-section">
         <div className="pv-container about-grid">
           <div className="about-card glass-card">
-            <h2>About Paradis Voyage</h2>
-            <p>Paradis Voyage is a luxury travel and private aviation concierge designed for clients who expect clarity, discretion, and precision.</p>
-            <p>We connect you with trusted global operators, ensuring seamless coordination, transparent pricing, and absolute reliability. Every journey is handled personally — from private jet charters to bespoke travel experiences — with no unnecessary layers, no friction, and no compromises.</p>
-            <p>This is not mass-market travel. This is tailored, controlled, and effortless.</p>
+            <h2>About Paradais Voyage</h2>
+            <p>Paradais Voyage is a luxury travel and private aviation concierge created for clients who value clarity, discretion, and absolute control.</p>
+            <p>We work exclusively with trusted global operators to deliver seamless coordination, transparent pricing, and uncompromising reliability. Every journey is handled personally — from private jet charters to bespoke travel arrangements — without intermediaries, friction, or unnecessary complexity.</p>
+            <p>This is not mass-market travel.<br />This is precision, discretion, and travel designed entirely around you.</p>
             <a className="btn-gold" href="#form">Speak With a Concierge</a>
           </div>
           <div className="about-side glass-panel" />
