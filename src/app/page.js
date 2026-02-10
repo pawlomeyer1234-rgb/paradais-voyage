@@ -10,7 +10,6 @@ export default function Page(){
   const [cookiesOpen, setCookiesOpen] = useState(false);
   const [cookiesConsent, setCookiesConsent] = useState(false);
   const [preferencesOpen, setPreferencesOpen] = useState(false);
-  const [formSuccess, setFormSuccess] = useState(false);
   const [cookiePreferences, setCookiePreferences] = useState({
     essential: true, // always true
     performance: false,
@@ -88,12 +87,12 @@ export default function Page(){
           <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '2rem' }}>Aircraft Categories</h2>
           <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', maxWidth: '1100px', margin: '0 auto' }}>
             {[
-              { title: 'Light Jets →', desc: 'Ideal for short-haul flights across Europe, offering speed, flexibility, and access to smaller airports.', image: '/images/hero/Light Jets.png' },
-              { title: 'Midsize Jets →', desc: 'A balance of comfort and range for longer European routes and multi-city travel.', image: '/images/hero/Midsize Jets.png' },
-              { title: 'Heavy Jets →', desc: 'Spacious cabins and intercontinental capability for long-range private travel.', image: '/images/hero/Heavy Jets.png' },
-              { title: 'Ultra Long Range →', desc: 'Non-stop intercontinental flights with maximum comfort and performance.', image: '/images/hero/Ultra Long Range.png' }
+              { slug: 'light-jets', title: 'Light Jets →', desc: 'Ideal for short-haul flights across Europe, offering speed, flexibility, and access to smaller airports.', image: '/images/hero/Light Jets.png' },
+              { slug: 'midsize-jets', title: 'Midsize Jets →', desc: 'A balance of comfort and range for longer European routes and multi-city travel.', image: '/images/hero/Midsize Jets.png' },
+              { slug: 'heavy-jets', title: 'Heavy Jets →', desc: 'Spacious cabins and intercontinental capability for long-range private travel.', image: '/images/hero/Heavy Jets.png' },
+              { slug: 'ultra-long-range', title: 'Ultra Long Range →', desc: 'Non-stop intercontinental flights with maximum comfort and performance.', image: '/images/hero/Ultra Long Range.png' }
             ].map((cat, i) => (
-              <Link key={i} href="/get-a-jet-quote" className="glass-card" style={{ padding: 0, overflow: 'hidden', textDecoration: 'none', color: 'inherit', display: 'block' }}>
+              <Link key={i} href={`/aircraft/${cat.slug}`} className="glass-card" style={{ padding: 0, overflow: 'hidden', textDecoration: 'none', color: 'inherit', display: 'block' }}>
                 <img
                   src={cat.image}
                   alt=""
@@ -161,70 +160,11 @@ export default function Page(){
 
       <section id="form" className="pv-section pv-form">
         <div className="pv-container">
-          <form 
-            className="form-glass" 
-            action="https://api.web3forms.com/submit" 
-            method="POST"
-            onSubmit={async (e) => {
-              e.preventDefault();
-              const form = e.target;
-              const formData = new FormData(form);
-              const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData
-              });
-              const data = await response.json();
-              if (data.success) {
-                form.reset();
-                setFormSuccess(true);
-              } else {
-                alert('There was an error submitting your request. Please try again.');
-              }
-            }}
-          >
-            <input type="hidden" name="access_key" value="abf23d8e-c302-4ef2-873a-a62ce6e29277" />
+          <div className="form-glass" style={{ textAlign: 'center', padding: '2.5rem' }}>
             <h3>Get a Private Jet Quote</h3>
-            <p style={{ margin: '0 0 1.25rem', opacity: 0.9, fontSize: '0.95rem' }}>Share your route, dates, and passengers. Our concierge responds within 60 minutes (business hours).</p>
-            <div className="grid">
-              <input className="input-glass" name="name" placeholder="Full name" required />
-              <input className="input-glass" name="email" placeholder="Email" type="email" required />
-              <input className="input-glass" name="phone" placeholder="Phone (optional)" />
-              <input className="input-glass" name="preferred_dates" placeholder="Preferred dates / time window" />
-            </div>
-            <textarea className="input-glass" name="message" rows={5} placeholder="Route (from / to), passengers, one-way or return, aircraft preference, and any special requirements." required />
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', marginTop: '1rem' }}>
-              <input 
-                type="checkbox" 
-                id="terms-checkbox" 
-                required 
-                style={{ 
-                  marginTop: '0.25rem',
-                  accentColor: '#ffd700',
-                  transform: 'scale(1.2)'
-                }} 
-              />
-              <label htmlFor="terms-checkbox" style={{ color: '#fff', fontSize: '0.9rem', lineHeight: '1.4' }}>
-                I agree to the{' '}
-                <span 
-                  style={{ color: '#ffd700', cursor: 'pointer', textDecoration: 'underline' }}
-                  onClick={() => setTermsOpen(true)}
-                >
-                  Terms & Conditions
-                </span>
-                {' '}and{' '}
-                <span 
-                  style={{ color: '#ffd700', cursor: 'pointer', textDecoration: 'underline' }}
-                  onClick={() => setPrivacyOpen(true)}
-                >
-                  Privacy Policy
-                </span>
-              </label>
-            </div>
-            <div className="form-foot">
-              <button className="btn-gold" type="submit">Submit Request</button>
-              <span className="fine">Response from a concierge within 60 minutes during business hours.</span>
-            </div>
-          </form>
+            <p style={{ margin: '0 0 1.5rem', opacity: 0.9, fontSize: '0.95rem', maxWidth: '32rem', marginLeft: 'auto', marginRight: 'auto' }}>Share your route, dates, and passengers. Our concierge responds within 60 minutes (business hours).</p>
+            <a className="btn-gold" href="/get-a-jet-quote">Request a Quote</a>
+          </div>
         </div>
       </section>
 
@@ -879,81 +819,6 @@ export default function Page(){
         </div>
       )}
 
-      {formSuccess && (
-        <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(0,0,0,0.5)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: 1000
-        }} onClick={() => setFormSuccess(false)}>
-          <div style={{
-            backgroundColor: 'rgba(255,255,255,0.1)',
-            backdropFilter: 'blur(20px)',
-            borderRadius: '20px',
-            padding: '2rem',
-            maxWidth: '500px',
-            width: '90%',
-            border: '1px solid rgba(255,255,255,0.2)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
-            textAlign: 'center'
-          }} onClick={(e) => e.stopPropagation()}>
-            <div style={{ marginBottom: '1.5rem' }}>
-              <div style={{
-                width: '64px',
-                height: '64px',
-                margin: '0 auto 1rem',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #D4AF37, #C5A46D 55%, #BFA46A)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '2rem',
-                color: '#1a1a1a'
-              }}>
-                ✓
-              </div>
-              <h2 style={{ margin: 0, color: '#fff', fontSize: '1.5rem', marginBottom: '0.5rem' }}>Thank you!</h2>
-              <p style={{ margin: 0, color: '#fff', fontSize: '1rem', lineHeight: '1.6' }}>
-                Your request has been submitted. We will respond within 24 hours.
-              </p>
-            </div>
-            <button
-              onClick={() => setFormSuccess(false)}
-              style={{
-                background: 'linear-gradient(135deg, #D4AF37, #C5A46D 55%, #BFA46A)',
-                border: 'none',
-                color: '#1a1a1a',
-                padding: '0.75rem 2rem',
-                borderRadius: '14px',
-                cursor: 'pointer',
-                fontSize: '0.9rem',
-                fontWeight: '700',
-                letterSpacing: '0.3px',
-                transition: 'all 0.15s ease',
-                boxShadow: '0 10px 24px rgba(212, 175, 55, 0.35)'
-              }}
-              onMouseOver={(e) => {
-                e.target.style.transform = 'translateY(-2px)';
-                e.target.style.filter = 'brightness(1.05)';
-                e.target.style.boxShadow = '0 14px 30px rgba(212, 175, 55, 0.45)';
-              }}
-              onMouseOut={(e) => {
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.filter = 'brightness(1)';
-                e.target.style.boxShadow = '0 10px 24px rgba(212, 175, 55, 0.35)';
-              }}
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </main>
   );
 }
