@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Page(){
   const [open, setOpen] = useState(false);
@@ -154,15 +155,21 @@ export default function Page(){
           <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Popular Private Jet Routes</h2>
           <div className="strip-row">
             <Link href="/get-a-jet-quote?corridor=Intra-Europe" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="destination-image" style={{ backgroundImage: 'url(/images/hero/jet.webp)' }}></div>
+              <div className="destination-image" style={{ position: 'relative', overflow: 'hidden' }}>
+                <Image src="/images/hero/Intra-Europe.png" alt="Intra-Europe Private Jet" fill sizes="(max-width: 768px) 100vw, 360px" style={{ objectFit: 'cover' }} />
+              </div>
               <span className="destination-name">Intra-Europe <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span></span>
             </Link>
             <Link href="/get-a-jet-quote?corridor=EU-US" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="destination-image" style={{ backgroundImage: 'url(/images/hero/jet.webp)' }}></div>
+              <div className="destination-image" style={{ position: 'relative', overflow: 'hidden' }}>
+                <Image src="/images/hero/Europe-US.png" alt="Europe to US Private Jet" fill sizes="(max-width: 768px) 100vw, 360px" style={{ objectFit: 'cover' }} />
+              </div>
               <span className="destination-name">Europe ↔ US <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span></span>
             </Link>
             <Link href="/get-a-jet-quote?corridor=EU-ME" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div className="destination-image" style={{ backgroundImage: 'url(/images/hero/jet.webp)' }}></div>
+              <div className="destination-image" style={{ position: 'relative', overflow: 'hidden' }}>
+                <Image src="/images/hero/Europe-Middle East.png" alt="Europe to Middle East Private Jet" fill sizes="(max-width: 768px) 100vw, 360px" style={{ objectFit: 'cover' }} />
+              </div>
               <span className="destination-name">Europe ↔ Middle East <span style={{ marginLeft: '8px', fontSize: '0.8em', opacity: 0.8 }}>→</span></span>
             </Link>
           </div>
