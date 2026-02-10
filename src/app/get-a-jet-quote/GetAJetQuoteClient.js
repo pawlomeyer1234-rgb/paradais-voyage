@@ -16,10 +16,22 @@ const CORRIDOR_INTROS = {
   "EU-ME": "Luxury private jet travel between Europe and the Middle East.",
 };
 
+const AIRCRAFT_DISPLAY_NAMES = {
+  "light-jets": "Light Jets",
+  "midsize-jets": "Midsize Jets",
+  "heavy-jets": "Heavy Jets",
+  "ultra-long-range": "Ultra Long Range",
+};
+
+const VALID_AIRCRAFT_SLUGS = Object.keys(AIRCRAFT_DISPLAY_NAMES);
+
 export default function GetAJetQuoteClient() {
   const searchParams = useSearchParams();
   const corridorRaw = (searchParams.get("corridor") ?? "").trim();
   const destination = (searchParams.get("destination") ?? "").trim();
+  const aircraftSlug = (searchParams.get("aircraft") ?? "").trim().toLowerCase();
+  const aircraft = VALID_AIRCRAFT_SLUGS.includes(aircraftSlug) ? aircraftSlug : null;
+  const aircraftDisplayName = aircraft ? AIRCRAFT_DISPLAY_NAMES[aircraft] : null;
 
   const corridor = useMemo(() => {
     const upper = corridorRaw.toUpperCase().replace(/\s+/g, "-");
@@ -34,9 +46,10 @@ export default function GetAJetQuoteClient() {
 
   const headline = useMemo(() => {
     if (corridor && CORRIDOR_HEADLINES[corridor]) return CORRIDOR_HEADLINES[corridor];
+    if (aircraftDisplayName) return `Get a Quote: ${aircraftDisplayName}`;
     if (destination) return `Private Jet Charter to ${destination}`;
     return "Get a Private Jet Quote";
-  }, [corridor, destination]);
+  }, [corridor, destination, aircraftDisplayName]);
 
   const introCopy = corridor ? CORRIDOR_INTROS[corridor] : null;
 
@@ -106,11 +119,29 @@ export default function GetAJetQuoteClient() {
               {corridor && ["EU", "EU-US", "EU-ME"].includes(corridor) && (
                 <input type="hidden" name="corridor" value={corridor} />
               )}
+              {aircraft && (
+                <input type="hidden" name="aircraft" value={aircraft} />
+              )}
               <h3>{headline}</h3>
               {introCopy && (
                 <p style={{ marginTop: "0.5rem", marginBottom: "1.25rem", opacity: 0.95, lineHeight: 1.5 }}>
                   {introCopy}
                 </p>
+              )}
+              {aircraftDisplayName && (
+                <div style={{ marginBottom: "1rem" }}>
+                  <label style={{ display: "block", fontSize: "0.85rem", opacity: 0.9, marginBottom: "0.35rem" }}>Aircraft category</label>
+                  <input
+                    type="text"
+                    className="input-glass"
+                    value={aircraftDisplayName}
+                    readOnly
+                    disabled
+                    style={{ cursor: "default", opacity: 0.95 }}
+                    tabIndex={-1}
+                    aria-readonly="true"
+                  />
+                </div>
               )}
               <div className="grid">
                 <input
