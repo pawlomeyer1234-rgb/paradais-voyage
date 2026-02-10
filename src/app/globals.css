@@ -443,6 +443,10 @@ body {
   /* Grid cell only; size comes from .pv-media-frame */
 }
 
+.about-side .pv-media-frame img {
+  object-position: right center;
+}
+
 .pv-form {
   padding-bottom: 90px;
 }
