@@ -60,7 +60,7 @@ export default function GetAJetQuoteClient() {
               <span className="brand-mark" aria-hidden="true" />
               <div>
                 <span className="brand-text">Paradais Voyage</span>
-                <div className="brand-tagline">Private Jet Charter</div>
+                <div className="brand-tagline">Luxury Travel Concierge</div>
               </div>
             </Link>
           </div>
