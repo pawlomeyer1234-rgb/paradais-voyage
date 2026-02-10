@@ -34,16 +34,16 @@ export default function Page(){
               <span className="brand-mark" aria-hidden="true" />
               <div>
                 <span className="brand-text">Paradais Voyage</span>
-                <div className="brand-tagline">Luxury Travel Concierge</div>
+                <div className="brand-tagline">Private Jet Charter</div>
               </div>
             </div>
           </div>
           <nav className="nav-items">
-            <a href="#experiences">Private Jets</a>
-            <a href="#how-it-works">How It Works</a>
+            <a href="#what-we-do">What We Do</a>
+            <a href="#aircraft-categories">Aircraft</a>
             <a href="#about">About</a>
-            <a className="btn-glass btn-sm" href="#form">
-              Get a Jet Quote
+            <a className="btn-glass btn-sm" href="/get-a-jet-quote">
+              Get a Private Jet Quote
             </a>
           </nav>
         </div>
@@ -52,19 +52,11 @@ export default function Page(){
       <section className="pv-hero">
         <div className="pv-container hero-grid">
           <div className="hero-copy glass-card">
-            <h1>We Arrange Private Jet Charter Worldwide.</h1>
-            <p>We introduce private clients to vetted private aviation partners worldwide — sourcing the right aircraft for your route, schedule and preferences. Flights are operated by licensed third-party operators; we remain your single point of contact from quote to wheels-down.</p>
+            <h1>Private Jet Charter. Precision Without Compromise.</h1>
+            <p>Global access to vetted aircraft operators. One point of contact. Absolute discretion.</p>
             <div className="cta-row">
-              <a className="btn-gold" href="#form">Get a Jet Quote</a>
-              <a className="btn-glass" href="#how-it-works">How It Works</a>
+              <a className="btn-gold" href="/get-a-jet-quote">Get a Private Jet Quote</a>
             </div>
-            <p className="trust-badges" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.5rem', margin: 0 }}>
-              <span className="badge-glass">On-Demand Charter</span>
-              <span aria-hidden="true">·</span>
-              <span className="badge-glass">24/7 Aviation Concierge</span>
-              <span aria-hidden="true">·</span>
-              <span className="badge-glass">Discreet, Vetted Operators</span>
-            </p>
           </div>
           <div className="hero-visual">
             <div className="hero-media glass-panel" />
@@ -72,17 +64,20 @@ export default function Page(){
         </div>
       </section>
 
-      <section id="experiences" className="pv-section">
-        <div className="pv-container cards" style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
-          <article className="feature-card glass-card" style={{ width: '400px', flex: '0 0 auto' }}>
-            <div className="experience-images">
-              <div className="experience-image" style={{ backgroundImage: "url('/images/hero/jet.webp')" }} />
+      <section id="what-we-do" className="pv-section">
+        <div className="pv-container">
+          <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>What We Do</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', maxWidth: '900px', margin: '0 auto' }}>
+            <div className="glass-card" style={{ padding: '1.25rem', textAlign: 'center' }}>
+              <strong style={{ fontSize: '1rem' }}>Private Jet Charter Brokerage</strong>
             </div>
-            <h3>Private Jet Charter</h3>
-            <p>Worldwide on-demand private jet charter through vetted aviation partners.</p>
-            <p>From short-haul business flights to intercontinental journeys, we source the right aircraft for your route, timing and preferences.</p>
-            <a className="btn-link" href="#form">Get a Jet Quote →</a>
-          </article>
+            <div className="glass-card" style={{ padding: '1.25rem', textAlign: 'center' }}>
+              <strong style={{ fontSize: '1rem' }}>Access to Vetted Global Operators</strong>
+            </div>
+            <div className="glass-card" style={{ padding: '1.25rem', textAlign: 'center' }}>
+              <strong style={{ fontSize: '1rem' }}>Single Point of Contact from Quote to Wheels-Down</strong>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -115,37 +110,6 @@ export default function Page(){
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="how-it-works" className="pv-section">
-        <div className="pv-container">
-          <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '2rem' }}>How It Works</h2>
-          <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', maxWidth: '1000px', margin: '0 auto' }}>
-            <article className="glass-card" style={{ padding: '1.5rem' }}>
-              <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>1</span>
-              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Share Your Route & Timing</h3>
-              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>Tell us where you're flying, your preferred dates, and passenger details.</p>
-            </article>
-            <article className="glass-card" style={{ padding: '1.5rem' }}>
-              <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>2</span>
-              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Aircraft Sourcing</h3>
-              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>We source suitable aircraft options through our vetted private aviation partners.</p>
-            </article>
-            <article className="glass-card" style={{ padding: '1.5rem' }}>
-              <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>3</span>
-              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>Operator Booking & Flight Delivery</h3>
-              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>The selected operator handles contracts, payments, and all flight operations.</p>
-            </article>
-            <article className="glass-card" style={{ padding: '1.5rem' }}>
-              <span className="badge-glass" style={{ display: 'inline-block', marginBottom: '0.75rem' }}>4</span>
-              <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem' }}>One Point of Contact</h3>
-              <p style={{ margin: 0, opacity: 0.9, fontSize: '0.95rem' }}>We remain your single point of contact from quote to wheels-down.</p>
-            </article>
-          </div>
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <a className="btn-gold" href="#form">Get a Jet Quote</a>
           </div>
         </div>
       </section>
@@ -183,7 +147,7 @@ export default function Page(){
             <p>Paradais Voyage is a luxury travel and private aviation concierge created for clients who value clarity, discretion, and absolute control.</p>
             <p>We work exclusively with trusted global operators to deliver seamless coordination, transparent pricing, and uncompromising reliability. Every journey is handled personally — from private jet charters to bespoke travel arrangements — without intermediaries, friction, or unnecessary complexity.</p>
             <p>This is not mass-market travel.<br />This is precision, discretion, and travel designed entirely around you.</p>
-            <a className="btn-gold" href="#form">Speak With a Concierge</a>
+            <a className="btn-gold" href="/get-a-jet-quote">Speak With a Concierge</a>
           </div>
           <div className="about-side glass-panel" />
         </div>
@@ -259,20 +223,19 @@ export default function Page(){
       </section>
 
       <footer className="pv-footer">
-        <div className="pv-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '2rem' }}>
+        <div className="pv-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '2rem', flexWrap: 'wrap' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.5rem' }}>
             <div>Contact: info@paradaisvoyage.com</div>
-            <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)', margin: '0.25rem 0' }}></div>
+            <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)', margin: '0.25rem 0' }} />
             <div style={{ cursor: 'pointer' }} onClick={() => setTermsOpen(true)}>Terms & Conditions</div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
             <div>© {new Date().getFullYear()} Paradais Voyage</div>
-            <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)', margin: '0.25rem 0' }}></div>
+            <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)', margin: '0.25rem 0' }} />
             <div style={{ cursor: 'pointer' }} onClick={() => setPrivacyOpen(true)}>Privacy Policy</div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
-            <div className="muted">Luxury Travel Concierge</div>
-            <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)', margin: '0.25rem 0' }}></div>
+            <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.3)', margin: '0.25rem 0' }} />
             <div style={{ cursor: 'pointer' }} onClick={() => setCookiesOpen(true)}>Cookies Policy</div>
           </div>
         </div>

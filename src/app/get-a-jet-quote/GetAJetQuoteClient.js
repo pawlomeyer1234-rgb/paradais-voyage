@@ -43,16 +43,16 @@ export default function GetAJetQuoteClient() {
               <span className="brand-mark" aria-hidden="true" />
               <div>
                 <span className="brand-text">Paradais Voyage</span>
-                <div className="brand-tagline">Luxury Travel Concierge</div>
+                <div className="brand-tagline">Private Jet Charter</div>
               </div>
             </Link>
           </div>
           <nav className="nav-items">
-            <Link href="/#experiences">Private Jets</Link>
-            <Link href="/#how-it-works">How It Works</Link>
+            <Link href="/#what-we-do">What We Do</Link>
+            <Link href="/#aircraft-categories">Aircraft</Link>
             <Link href="/#about">About</Link>
             <Link className="btn-glass btn-sm" href="/get-a-jet-quote">
-              Get a Jet Quote
+              Get a Private Jet Quote
             </Link>
           </nav>
         </div>
