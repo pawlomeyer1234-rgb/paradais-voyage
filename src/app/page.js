@@ -319,70 +319,73 @@ export default function Page(){
               </button>
             </div>
             <div style={{ color: '#fff', lineHeight: '1.6' }}>
-              <p style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.25rem' }}>PRIVACY POLICY – Paradais Voyage Luxury Travel Concierge</p>
+              <p style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.25rem' }}>PRIVACY POLICY – Paradais Voyage Ltd</p>
               <p style={{ fontStyle: 'italic', opacity: 0.85 }}>Last updated: 01/11/2025</p>
-              <p style={{ marginBottom: '1.5rem' }}>Contact: <a href="mailto:info@paradaisvoyage.com" style={{ color: '#ffd700' }}>info@paradaisvoyage.com</a></p>
+              <p style={{ marginBottom: '1.5rem' }}><strong>Contact:</strong><br /><a href="mailto:info@paradaisvoyage.com" style={{ color: '#ffd700' }}>info@paradaisvoyage.com</a></p>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
               <h3 style={{ color: '#fff', marginTop: 0, marginBottom: '0.75rem', fontSize: '1.1rem' }}>1. Introduction</h3>
-              <p>Paradais Voyage Luxury Travel Concierge ("we", "our", "us") respects your privacy and is committed to protecting your data under <strong>UK GDPR</strong>.</p>
+              <p>Paradais Voyage Ltd (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) respects your privacy and is committed to protecting your personal data in accordance with the UK General Data Protection Regulation (UK GDPR).</p>
+              <p>This Privacy Policy explains how we collect, use, and protect your information when you use our website and services.</p>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
               <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>2. Data We Collect</h3>
-              <p>We may collect:</p>
+              <p>We may collect and process the following personal data:</p>
               <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
-                <li>Name, email, and phone number</li>
-                <li>Travel preferences (destinations, dates, accommodation)</li>
-                <li>Passport details (where required)</li>
-                <li>Payment information (processed by Stripe)</li>
+                <li>Full name</li>
+                <li>Email address</li>
+                <li>Phone number (if provided)</li>
+                <li>Travel-related information submitted via enquiry forms (such as route, dates, passenger count, and preferences)</li>
               </ul>
+              <p>We do not intentionally collect passport details or sensitive personal data unless explicitly required and agreed in writing.</p>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
               <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>3. How We Use Your Data</h3>
-              <p>We use your data to:</p>
+              <p>We use your personal data to:</p>
               <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
-                <li>Process bookings and inquiries</li>
-                <li>Communicate about travel arrangements</li>
-                <li>Share information with suppliers to fulfil your request</li>
-                <li>Meet legal and regulatory requirements</li>
+                <li>Respond to enquiries and provide private aviation brokerage services</li>
+                <li>Communicate with you regarding your request</li>
+                <li>Share necessary information with third-party aircraft operators to obtain quotes or arrange services</li>
+                <li>Comply with legal and regulatory obligations</li>
               </ul>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
               <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>4. Sharing Your Data</h3>
-              <p>Your information is shared only with:</p>
+              <p>Your data may be shared only with:</p>
               <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
-                <li>Trusted suppliers (hotels, transport, airlines)</li>
-                <li>Stripe Payments UK Ltd (for payment processing)</li>
+                <li>Trusted third-party aircraft operators and aviation service providers for the purpose of fulfilling your request</li>
+                <li>Technical service providers supporting website functionality (e.g. form handling or email delivery)</li>
               </ul>
-              <p>We do not sell or rent your data to third parties.</p>
+              <p>We do not sell, rent, or trade your personal data to third parties.</p>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
-              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>5. Payments and Stripe</h3>
-              <p>Payments are handled by <strong>Stripe Connect</strong>, authorised by the <strong>Financial Conduct Authority (FCA)</strong>.</p>
-              <p>Stripe processes card and billing data securely, and Paradais Voyage does not have access to your full payment details.</p>
-              <p>For details, see <a href="https://stripe.com/gb/privacy" style={{ color: '#ffd700' }} target="_blank" rel="noopener noreferrer">Stripe’s Privacy Policy</a>.</p>
+              <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>5. Payments</h3>
+              <p>Paradais Voyage Ltd does not store or process full payment card details.</p>
+              <p>Where payments are required, they are handled directly between the client and the relevant third-party service provider, unless otherwise agreed in writing.</p>
+              <p>Any third-party payment processors operate under their own privacy policies.</p>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
               <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>6. Data Security</h3>
-              <p>We use SSL encryption, secure storage, and limited employee access. Your data is retained only as long as necessary to fulfil your booking.</p>
+              <p>We implement appropriate technical and organisational measures to protect your personal data, including SSL encryption and restricted access.</p>
+              <p>Your data is retained only for as long as necessary to fulfil the purposes outlined in this policy or to meet legal requirements.</p>
 
               <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.2)', margin: '1.5rem 0' }} />
 
               <h3 style={{ color: '#fff', marginBottom: '0.75rem', fontSize: '1.1rem' }}>7. Your Rights</h3>
-              <p>Under UK GDPR you may:</p>
+              <p>Under UK GDPR, you have the right to:</p>
               <ul style={{ marginLeft: '1rem', marginBottom: '1rem' }}>
-                <li>Request access to your data</li>
-                <li>Request correction or deletion</li>
-                <li>Withdraw consent</li>
-                <li>File a complaint with the <strong>Information Commissioner’s Office (ICO)</strong></li>
+                <li>Request access to your personal data</li>
+                <li>Request correction or deletion of your data</li>
+                <li>Withdraw consent at any time</li>
+                <li>Lodge a complaint with the Information Commissioner&apos;s Office (ICO)</li>
               </ul>
-              <p>To exercise your rights, contact us at <a href="mailto:info@paradaisvoyage.com" style={{ color: '#ffd700' }}>info@paradaisvoyage.com</a>.</p>
+              <p>To exercise your rights, please contact:<br /><a href="mailto:info@paradaisvoyage.com" style={{ color: '#ffd700' }}>info@paradaisvoyage.com</a></p>
             </div>
           </div>
         </div>
