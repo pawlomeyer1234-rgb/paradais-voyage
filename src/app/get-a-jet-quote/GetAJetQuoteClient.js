@@ -156,7 +156,7 @@ export default function GetAJetQuoteClient() {
       </section>
 
       <footer className="pv-footer">
-        <div className="pv-container" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "2rem" }}>
+        <div className="pv-container" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "2rem", flexWrap: "wrap" }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "0.5rem" }}>
             <div>Contact: info@paradaisvoyage.com</div>
             <div style={{ width: "100%", height: "1px", backgroundColor: "rgba(255,255,255,0.3)", margin: "0.25rem 0" }} />
@@ -168,6 +168,7 @@ export default function GetAJetQuoteClient() {
             <div style={{ cursor: "pointer" }} onClick={() => setPrivacyOpen(true)}>Privacy Policy</div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "0.5rem" }}>
+            <div className="muted">Luxury Travel Concierge</div>
             <div style={{ width: "100%", height: "1px", backgroundColor: "rgba(255,255,255,0.3)", margin: "0.25rem 0" }} />
             <div style={{ cursor: "pointer" }} onClick={() => setCookiesOpen(true)}>Cookies Policy</div>
           </div>
