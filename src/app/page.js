@@ -213,14 +213,15 @@ export default function Page(){
             }}
           >
             <input type="hidden" name="access_key" value="abf23d8e-c302-4ef2-873a-a62ce6e29277" />
-            <h3>Let's Plan Your Next Sojourn</h3>
+            <h3>Get a Private Jet Quote</h3>
+            <p style={{ margin: '0 0 1.25rem', opacity: 0.9, fontSize: '0.95rem' }}>Share your route, dates, and passengers. Our concierge responds within 60 minutes (business hours).</p>
             <div className="grid">
               <input className="input-glass" name="name" placeholder="Full name" required />
               <input className="input-glass" name="email" placeholder="Email" type="email" required />
               <input className="input-glass" name="phone" placeholder="Phone (optional)" />
-              <input className="input-glass" name="preferred_dates" placeholder="Preferred dates" />
+              <input className="input-glass" name="preferred_dates" placeholder="Preferred dates / time window" />
             </div>
-            <textarea className="input-glass" name="message" rows={5} placeholder="Tell us the vibe, not just the place..." required />
+            <textarea className="input-glass" name="message" rows={5} placeholder="Route (from / to), passengers, one-way or return, aircraft preference, and any special requirements." required />
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', marginTop: '1rem' }}>
               <input 
                 type="checkbox" 
@@ -251,7 +252,7 @@ export default function Page(){
             </div>
             <div className="form-foot">
               <button className="btn-gold" type="submit">Submit Request</button>
-              <span className="fine">Response from a concierge within 24 hours.</span>
+              <span className="fine">Response from a concierge within 60 minutes during business hours.</span>
             </div>
           </form>
         </div>
