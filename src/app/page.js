@@ -118,7 +118,7 @@ export default function Page(){
         <div className="pv-container">
           <h2 className="pv-section-title" style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Popular Private Jet Routes</h2>
           <div className="strip-row">
-            <Link href="/get-a-jet-quote?corridor=Intra-Europe" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link href="/get-a-jet-quote?corridor=EU" className="chip glass-chip destination-chip" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="destination-image" style={{ position: 'relative', overflow: 'hidden' }}>
                 <Image src="/images/hero/Intra-Europe.png" alt="Intra-Europe Private Jet" fill sizes="(max-width: 768px) 100vw, 360px" style={{ objectFit: 'cover' }} />
               </div>

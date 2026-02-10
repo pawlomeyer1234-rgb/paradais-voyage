@@ -4,30 +4,47 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
+const CORRIDOR_HEADLINES = {
+  EU: "Private Jet Charter: Intra-Europe",
+  "EU-US": "Private Jet Charter: Europe ↔ United States",
+  "EU-ME": "Private Jet Charter: Europe ↔ Middle East",
+};
+
+const CORRIDOR_INTROS = {
+  EU: "Flexible private jet travel across Europe, tailored to your schedule.",
+  "EU-US": "Non-stop transatlantic private jet flights with long-range aircraft.",
+  "EU-ME": "Luxury private jet travel between Europe and the Middle East.",
+};
+
 export default function GetAJetQuoteClient() {
   const searchParams = useSearchParams();
-  const corridor = (searchParams.get("corridor") ?? "").trim();
+  const corridorRaw = (searchParams.get("corridor") ?? "").trim();
   const destination = (searchParams.get("destination") ?? "").trim();
+
+  const corridor = useMemo(() => {
+    const upper = corridorRaw.toUpperCase().replace(/\s+/g, "-");
+    if (upper === "EU" || upper === "INTRA-EUROPE") return "EU";
+    if (upper === "EU-US") return "EU-US";
+    if (upper === "EU-ME") return "EU-ME";
+    return corridorRaw || null;
+  }, [corridorRaw]);
 
   const isDubai = /dubai/i.test(destination);
   const isMaldives = /maldives/i.test(destination);
 
   const headline = useMemo(() => {
-    if (corridor) return `Private Jet Charter: ${corridor}`;
+    if (corridor && CORRIDOR_HEADLINES[corridor]) return CORRIDOR_HEADLINES[corridor];
     if (destination) return `Private Jet Charter to ${destination}`;
-    return "Get a Jet Quote";
+    return "Get a Private Jet Quote";
   }, [corridor, destination]);
+
+  const introCopy = corridor ? CORRIDOR_INTROS[corridor] : null;
 
   const destinationValue = useMemo(() => {
     if (isDubai) return "Dubai (DXB / DWC)";
     if (isMaldives) return "Maldives (MLE)";
     return "";
   }, [isDubai, isMaldives]);
-
-  const messageDefaultValue = useMemo(() => {
-    if (corridor) return `Corridor: ${corridor}\n\n`;
-    return "";
-  }, [corridor]);
 
   const [privacyOpen, setPrivacyOpen] = useState(false);
   const [termsOpen, setTermsOpen] = useState(false);
@@ -86,7 +103,15 @@ export default function GetAJetQuoteClient() {
             >
               <input type="hidden" name="access_key" value="abf23d8e-c302-4ef2-873a-a62ce6e29277" />
               <input type="hidden" name="form_page" value="get-a-jet-quote" />
+              {corridor && ["EU", "EU-US", "EU-ME"].includes(corridor) && (
+                <input type="hidden" name="corridor" value={corridor} />
+              )}
               <h3>{headline}</h3>
+              {introCopy && (
+                <p style={{ marginTop: "0.5rem", marginBottom: "1.25rem", opacity: 0.95, lineHeight: 1.5 }}>
+                  {introCopy}
+                </p>
+              )}
               <div className="grid">
                 <input
                   key={destinationValue || "destination"}
@@ -101,12 +126,10 @@ export default function GetAJetQuoteClient() {
                 <input className="input-glass" name="preferred_dates" placeholder="Preferred dates" />
               </div>
               <textarea
-                key={messageDefaultValue ? "with-corridor" : "no-corridor"}
                 className="input-glass"
                 name="message"
                 rows={5}
-                placeholder="Route, dates, passengers, and any preferences..."
-                defaultValue={messageDefaultValue}
+                placeholder="Route details, cities, passengers, preferences..."
                 required
               />
               <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", marginTop: "1rem" }}>
@@ -145,7 +168,6 @@ export default function GetAJetQuoteClient() {
             <div style={{ cursor: "pointer" }} onClick={() => setPrivacyOpen(true)}>Privacy Policy</div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "0.5rem" }}>
-            <div className="muted">Luxury Travel Concierge</div>
             <div style={{ width: "100%", height: "1px", backgroundColor: "rgba(255,255,255,0.3)", margin: "0.25rem 0" }} />
             <div style={{ cursor: "pointer" }} onClick={() => setCookiesOpen(true)}>Cookies Policy</div>
           </div>
