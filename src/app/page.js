@@ -149,8 +149,10 @@ export default function Page(){
             <p>This is not mass-market travel.<br />This is precision, discretion, and travel designed entirely around you.</p>
             <a className="btn-gold" href="/get-a-jet-quote">Speak With a Concierge</a>
           </div>
-          <div className="about-side glass-panel">
-            <img src="/images/hero/cabin.jpg" alt="Private jet cabin" />
+          <div className="about-side">
+            <div className="about-image-container glass-panel">
+              <img src="/images/hero/cabin.jpg" alt="Private jet cabin" />
+            </div>
           </div>
         </div>
       </section>

@@ -439,18 +439,24 @@ body {
 }
 
 .about-side {
-  aspect-ratio: 4 / 3;
-  border-radius: 24px;
-  overflow: hidden;
-  position: relative;
+  /* Grid cell only; size comes from .about-image-container */
 }
 
-.about-side img {
+.about-image-container {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 100%;
+  height: 420px;
+  max-height: 420px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.about-image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  vertical-align: middle;
 }
 
 .pv-form {
@@ -651,6 +657,11 @@ textarea.input-glass {
   
   .hero-visual .hero-media {
     height: 200px;
+  }
+  
+  .about-image-container {
+    height: 200px;
+    max-height: 200px;
   }
   
   .pv-section {
@@ -861,6 +872,11 @@ textarea.input-glass {
   
   .hero-visual .hero-media {
     height: 300px;
+  }
+  
+  .about-image-container {
+    height: 300px;
+    max-height: 300px;
   }
   
   .pv-section {
@@ -1116,6 +1132,11 @@ textarea.input-glass {
   
   .hero-visual .hero-media {
     height: 200px;
+  }
+  
+  .about-image-container {
+    height: 200px;
+    max-height: 200px;
   }
   
   .pv-section {
